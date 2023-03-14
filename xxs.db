@@ -1,0 +1,65 @@
+/*remove database,since we want to always recreate database */
+drop database if exists xxs;
+
+/*create database*/
+create database xxs;
+
+/*execute SQL statements to this selected database*/
+use xxs;
+
+/* Client */
+
+CREATE TABLE Client (
+clientid CHAR(6),
+clientname CHAR(30) NOT NULL,
+postalcode CHAR(10),
+clientaddress CHAR(30), 
+phonenumber CHAR(20),
+PRIMARY KEY (clientid)
+) ;
+
+/* CATEGORY */
+
+CREATE TABLE Category (
+categoryid SMALLINT,
+categoryname CHAR(20),
+PRIMARY KEY (categoryid)
+);
+
+/* PRODUCT */
+
+CREATE TABLE Product (
+productid INTEGER,
+productname CHAR(30) NOT NULL,
+categoryid SMALLINT,
+price DECIMAL(5,2),
+sale INTEGER(2),
+imgURL VARCHAR(255),
+PRIMARY KEY (productid),
+FOREIGN KEY (categoryid)
+    REFERENCES Category (categoryid)
+);
+
+/* Orders */
+
+CREATE TABLE Orders (
+ordernum INTEGER NOT NULL,
+clientid CHAR(6) NOT NULL,
+orderdate DATETIME NOT NULL,
+orderstate CHAR(1),
+PRIMARY KEY (ordernum),
+FOREIGN KEY (clientid)
+    REFERENCES Client (clientid)
+); 
+
+/* ORDER ROW */
+
+CREATE TABLE Orderrow (
+ordernum INTEGER NOT NULL,
+rownum INTEGER NOT NULL,
+productid INTEGER NOT NULL,
+pcs INTEGER NOT NULL,
+PRIMARY KEY (ordernum, rownum),
+FOREIGN KEY (productid)
+    REFERENCES Product (productid)
+);
