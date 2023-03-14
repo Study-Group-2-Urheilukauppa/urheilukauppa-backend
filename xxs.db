@@ -10,7 +10,7 @@ use xxs;
 /* Client */
 
 CREATE TABLE Client (
-clientid CHAR(6),
+clientid INT NOT NULL AUTO_INCREMENT,
 clientname CHAR(30) NOT NULL,
 postalcode CHAR(10),
 clientaddress CHAR(30), 
