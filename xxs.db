@@ -1,11 +1,12 @@
-/*remove database,since we want to always recreate database */
-drop database if exists xxs;
-
-/*create database*/
-create database xxs;
-
 /*execute SQL statements to this selected database*/
-use xxs;
+use opisk_n2isri00;
+
+/*remove tables, since we want to always recreate all tables */
+drop table if exists Client;
+drop table if exists Category;
+drop table if exists Product;
+drop table if exists Orders;
+drop table if exists Orderrow;
 
 /* Client */
 
@@ -21,7 +22,7 @@ PRIMARY KEY (clientid)
 /* CATEGORY */
 
 CREATE TABLE Category (
-categoryid SMALLINT,
+categoryid INT NOT NULL AUTO_INCREMENT,
 categoryname CHAR(20),
 PRIMARY KEY (categoryid)
 );
@@ -29,9 +30,9 @@ PRIMARY KEY (categoryid)
 /* PRODUCT */
 
 CREATE TABLE Product (
-productid INTEGER,
+productid INT NOT NULL AUTO_INCREMENT,
 productname CHAR(30) NOT NULL,
-categoryid SMALLINT,
+categoryid INT NOT NULL,
 price DECIMAL(5,2),
 sale INTEGER(2),
 imgURL VARCHAR(255),
@@ -40,11 +41,13 @@ FOREIGN KEY (categoryid)
     REFERENCES Category (categoryid)
 );
 
+ALTER TABLE Product AUTO_INCREMENT=1001;
+
 /* Orders */
 
 CREATE TABLE Orders (
-ordernum INTEGER NOT NULL,
-clientid CHAR(6) NOT NULL,
+ordernum INT NOT NULL AUTO_INCREMENT,
+clientid INT NOT NULL,
 orderdate DATETIME NOT NULL,
 orderstate CHAR(1),
 PRIMARY KEY (ordernum),
