@@ -1,31 +1,31 @@
-tuote
-- id
-- nimi
-- tuoteryhma_id
-- hinta
+Product TABLE
+- productid PRIMARY KEY
+- productname
+- categoryid FOREIGN KEY
+- price
 - imgURL
-- alennus <- null tai prosentti
+- sale <- null OR percentage
 
-tuoteryhma
-- tuoteryhma_id
-- tuoteryhman_nimi
+Category TABLE
+- categoryid PRIMARY KEY
+- categoryname
 
-tilaus
-- tilaus_nro
-- as_nro
-- tilaus_pvm
-- tila
+Orders TABLE
+- ordernum PRIMARY KEY
+- clientid FOREIGN KEY
+- orderdate
+- orderstate
 
-tilausrivi
-- tilaus_nro
-- rivi_nro
-- tuote_nro
-- kpl 
+Orderrow TABLE
+- ordernum PRIMARY KEY
+- rownum PRIMARY KEY
+- productid FOREIGNKEY
+- pcs
 
-asiakas 
-- as_nro
-- asnimi
-- postitmp
-- osoite
-- puhnro
+Client TABLE
+- clientid PRIMARY KEY
+- clientname
+- postalcode
+- clientaddress
+- phonenumber
 
