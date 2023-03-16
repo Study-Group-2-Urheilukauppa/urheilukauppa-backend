@@ -36,6 +36,7 @@ categoryid INT NOT NULL,
 price DECIMAL(5,2),
 sale INTEGER(2),
 imgURL VARCHAR(255),
+descript TEXT(1000),
 PRIMARY KEY (productid),
 FOREIGN KEY (categoryid)
     REFERENCES Category (categoryid)
