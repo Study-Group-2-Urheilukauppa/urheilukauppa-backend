@@ -77,5 +77,5 @@ FOREIGN KEY (productid)
     REFERENCES Product (productid)
 );
 
-insert into category (productname) values (talviurheilu);
-insert into category (productname) values (kuntoilu);
+insert into category (categoryname) values ("talviurheilu");
+insert into category (categoryname) values ("kuntoilu");
