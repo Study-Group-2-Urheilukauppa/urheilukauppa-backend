@@ -1,5 +1,5 @@
 <?php
-function openDb(): object {
+/*function openDb(): object {
   $ini= parse_ini_file("../config.ini", true);
 
   $host = $ini['host'];
@@ -9,6 +9,13 @@ function openDb(): object {
   $db = new PDO("mysql:host=$host;dbname=$database;charset=utf8",$user,$password);
   $db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
   return $db;
+}
+*/
+
+function openDB() {
+    $db = new PDO("mysql:host=localhost;dbname=xxl;charset=utf8","root","");
+    $db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+    return $db;
 }
 
 function selectAsJson(object $db,string $sql): void {

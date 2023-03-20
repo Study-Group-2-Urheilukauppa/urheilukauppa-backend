@@ -1,12 +1,21 @@
 /*execute SQL statements to this selected database*/
-use opisk_n2isri00;
+/*use opisk_n2isri00;
 
 /*remove tables, since we want to always recreate all tables */
+
+/*
 drop table if exists Client;
 drop table if exists Category;
 drop table if exists Product;
 drop table if exists Orders;
 drop table if exists Orderrow;
+*/
+
+drop database if exists xxs;
+
+create database xxs;
+
+use xxs;
 
 /* Client */
 
@@ -67,3 +76,6 @@ PRIMARY KEY (ordernum, rownum),
 FOREIGN KEY (productid)
     REFERENCES Product (productid)
 );
+
+insert into category (productname) values (talviurheilu);
+insert into category (productname) values (kuntoilu);
