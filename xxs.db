@@ -79,4 +79,7 @@ FOREIGN KEY (productid)
 
 insert into category (categoryname) values ("talviurheilu");
 insert into category (categoryname) values ("kuntoilu");
+insert into category (categoryname) values ("vesiurheilu");
+insert into category (categoryname) values ("mailapelit");
+insert into category (categoryname) values ("pyöraily");
 insert into product (productname,categoryid,price,sale,imgURL,descript) values ("sukset","1",20,NULL,"","Hienot sukset")
