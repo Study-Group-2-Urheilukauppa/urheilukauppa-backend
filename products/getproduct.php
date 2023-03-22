@@ -2,18 +2,19 @@
 require_once '../inc/functions.php';
 require_once '../inc/headers.php';
 
-// localhost:3000/products/getproduct.php/test1/test2/test3
-$uri = parse_url(filter_input(INPUT_SERVER,'PATH_INFO'),PHP_URL_PATH);
-
-$parameters = explode('/',$uri);
-$product_id = $parameters[0];
-
-
+// localhost:3000/products/getproduct.php/1001
+$url = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+$path = parse_url($url, PHP_URL_PATH);
+$parts = explode('/', $path);
+$product_id = $parts[count($parts)-1];
 
 try {
-  $db = openDb();
-  selectRowAsJson($db,"select * from product where productid = $product_id");
-}
-catch (PDOException $pdoex) {
-  returnError($pdoex);
+    $db = openDb();
+    $sql = "select * from product where productid = $product_id";
+    $query = $db->query($sql);
+    $results = $query->fetchALL(PDO::FETCH_ASSOC);
+    header("HTTP/1.1 200 OK");
+    print json_encode($results);
+} catch (PDOException $pdoex) {
+    returnError($pdoex);
 }
