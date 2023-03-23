@@ -1,0 +1,7 @@
+### ADD
+
+POST http://localhost/urheilukauppa-backend/addCategory.php
+
+{
+    "categoryname": "Jalkapallo"
+}
