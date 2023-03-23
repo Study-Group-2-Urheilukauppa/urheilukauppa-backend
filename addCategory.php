@@ -5,7 +5,7 @@ require_once "inc/functions.php";
 require_once "inc/headers.php";
 
 $input = json_decode(file_get_contents("php://input"));
-$categoryname = filter_var($input->categoryname,FILTER_SANITIZE_STRING);
+$categoryname = filter_var($input->categoryname,FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
 try {
     $db = openDb();
