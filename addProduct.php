@@ -15,7 +15,7 @@ try {
     $db = openDb();
     $query = $db->prepare("INSERT INTO product(productname, categoryid, price, sale, imgURL, descript) VALUES
          (:productname, :categoryid, :price, :sale, :imgURL, :descript)");
-    $query->bindValue(":productname", $name, PDO::PARAM_STR);
+    $query->bindValue(":productname", $productname, PDO::PARAM_STR);
     $query->bindValue(":categoryid", $description, PDO::PARAM_STR);
     $query->bindValue(":price", $price, PDO::PARAM_STR);
     $query->bindValue(":sale", $sale, PDO::PARAM_STR);
