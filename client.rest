@@ -1,7 +1,14 @@
 ### ADD
 
-POST http://localhost/urheilukauppa-backend/addCategory.php
+POST http://localhost:8080/urheilukauppa-backend/addProduct.php
 
 {
-    "categoryname": "Jalkapallo"
+    ""
+    "productname": "strapsit", 
+    "categoryid": "2", 
+    "price": "15", 
+    "sale": "", 
+    "imgURL": "", 
+    "descript": "hiento strapsit", 
+
 }
