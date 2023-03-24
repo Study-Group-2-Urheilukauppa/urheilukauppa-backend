@@ -101,3 +101,4 @@ insert into product (productname,categoryid,price,sale,imgURL,descript) values (
 insert into product (productname,categoryid,price,sale,imgURL,descript) values ("kilpapyörä","5",300,NULL,"","Tällä pyörällä voit osallistua Tour de Franceen");
 insert into client (clientname,postalcode,clientaddress,phonenumber) values ("Matti","90500","ouluntie1","123456789");
 insert into orders (clientid,orderdate,orderstate)VALUES("1","2023-03-24 11:40:01","");
+insert into orderrow (ordernum,rownum,productid,pcs) VALUES ("1","1","1001","3");
