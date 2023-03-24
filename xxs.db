@@ -99,3 +99,5 @@ insert into product (productname,categoryid,price,sale,imgURL,descript) values (
 insert into product (productname,categoryid,price,sale,imgURL,descript) values ("pesäpallomaila","4",50,NULL,"","Tämä maila soveltuu harrastamiseen ja itsepuolustukseen");
 insert into product (productname,categoryid,price,sale,imgURL,descript) values ("golfmaila","4",129.99,NULL,"","Tiger Woodsin suunnittelema maila");
 insert into product (productname,categoryid,price,sale,imgURL,descript) values ("kilpapyörä","5",300,NULL,"","Tällä pyörällä voit osallistua Tour de Franceen");
+insert into client (clientname,postalcode,clientaddress,phonenumber) values ("Matti","90500","ouluntie1","123456789");
+insert into orders (clientid,orderdate,orderstate)VALUES("1","2023-03-24 11:40:01","");
