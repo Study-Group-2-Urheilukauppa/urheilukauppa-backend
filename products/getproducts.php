@@ -3,7 +3,6 @@ require_once '../inc/functions.php';
 require_once '../inc/headers.php';
 
 $url = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-print_r($url);
 $path = parse_url($url, PHP_URL_PATH);
 $parts = explode('/', $path);
 $category_id = $parts[count($parts)-1];
