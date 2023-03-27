@@ -140,9 +140,9 @@ insert into product (productname,categoryid,price,sale,imgURL,descript) values (
 insert into product (productname,categoryid,price,sale,imgURL,descript) values ("pöytätennismaila","4",19.99,NULL,"product-images/mailapelit/poytatennis1.png","Tällä päihität naapurisi tallipeleissä");
 insert into product (productname,categoryid,price,sale,imgURL,descript) values ("pöytätennismaila","4",29.99,NULL,"product-images/mailapelit/poytatennis2.png","Pro-maila");
 insert into product (productname,categoryid,price,sale,imgURL,descript) values ("pöytätennismaila","4",15,NULL,"product-images/mailapelit/poytatennis3.png","Aloittelijan maila");
-insert into product (productname,categoryid,price,sale,imgURL,descript) values ("jääkiekkomaila","4",49,NULL,"product-images/mailapelit/jaakiekkomaila1.png","Ammattilaiselle");
-insert into product (productname,categoryid,price,sale,imgURL,descript) values ("jääkiekkomaila","4",29,NULL,"product-images/mailapelit/jaakiekkomaila2.png","Junioreille");
-insert into product (productname,categoryid,price,sale,imgURL,descript) values ("jääkiekkomaila","4",35,NULL,"product-images/mailapelit/jaakiekkomaila3.png","Harrastelijalle");
+insert into product (productname,categoryid,price,sale,imgURL,descript) values ("jääkiekkomaila","4",49,NULL,"product-images/mailapelit/jaakiekko1.png","Ammattilaiselle");
+insert into product (productname,categoryid,price,sale,imgURL,descript) values ("jääkiekkomaila","4",29,NULL,"product-images/mailapelit/jaakiekko2.png","Junioreille");
+insert into product (productname,categoryid,price,sale,imgURL,descript) values ("jääkiekkomaila","4",35,NULL,"product-images/mailapelit/jaakiekko3.png","Harrastelijalle");
 
 
 /* PYÖRÄILY */
