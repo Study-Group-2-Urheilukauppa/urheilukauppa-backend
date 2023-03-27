@@ -77,96 +77,96 @@ FOREIGN KEY (productid)
     REFERENCES Product (productid)
 );
 /* TALVIURHEILU */
-insert into category (categoryname) values ("talviurheilu");
+insert into Category (categoryname) values ("talviurheilu");
 
-insert into product (productname,categoryid,price,sale,imgURL,descript) values ("sukset","1",120,NULL,"product-images/talviurheilu/sukset1.png","Hienot sukset");
-insert into product (productname,categoryid,price,sale,imgURL,descript) values ("sukset","1",150,NULL,"product-images/talviurheilu/sukset2.png","Todella nopeat sukset");
-insert into product (productname,categoryid,price,sale,imgURL,descript) values ("sukset","1",115,NULL,"product-images/talviurheilu/sukset3.png","Temppuiluun sopivat sukset");
-insert into product (productname,categoryid,price,sale,imgURL,descript) values ("lumilauta","1",215,NULL,"product-images/talviurheilu/lumilauta1.png","Vauhdikas lumilauta");
-insert into product (productname,categoryid,price,sale,imgURL,descript) values ("lumilauta","1",180,NULL,"product-images/talviurheilu/lumilauta2.png","Aloittelijalle sopiva lumilauta");
-insert into product (productname,categoryid,price,sale,imgURL,descript) values ("lumilauta","1",240,NULL,"product-images/talviurheilu/lumilauta3.png","Temppuiluun soveltuva lumilauta");
-insert into product (productname,categoryid,price,sale,imgURL,descript) values ("luistimet","1",111,NULL,"product-images/talviurheilu/luistimet1.png","Näillä luistimilla sinusta tulee NHL tähti!");
-insert into product (productname,categoryid,price,sale,imgURL,descript) values ("luistimet","1",99,NULL,"product-images/talviurheilu/luistimet2.png","Aloittelijalle sopivat luistimet");
-insert into product (productname,categoryid,price,sale,imgURL,descript) values ("luistimet","1",140,NULL,"product-images/talviurheilu/luistimet3.png","Pro-pelaajille sopivat luistimet");
-insert into product (productname,categoryid,price,sale,imgURL,descript) values ("taitoluistimet","1",111,NULL,"product-images/talviurheilu/taitoluistimet1.png","Aloittelijan taitoluistimet");
-insert into product (productname,categoryid,price,sale,imgURL,descript) values ("taitoluistimet","1",111,NULL,"product-images/talviurheilu/taitoluistimet2.png","Näillä luistimilla teet näyttävät piruetit!");
-insert into product (productname,categoryid,price,sale,imgURL,descript) values ("taitoluistimet","1",111,NULL,"product-images/talviurheilu/taitoluistimet3.png","Ammattitason taitoluistimet");
+insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("sukset","1",120,NULL,"product-images/talviurheilu/sukset1.png","Hienot sukset");
+insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("sukset","1",150,NULL,"product-images/talviurheilu/sukset2.png","Todella nopeat sukset");
+insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("sukset","1",115,NULL,"product-images/talviurheilu/sukset3.png","Temppuiluun sopivat sukset");
+insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("lumilauta","1",215,NULL,"product-images/talviurheilu/lumilauta1.png","Vauhdikas lumilauta");
+insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("lumilauta","1",180,NULL,"product-images/talviurheilu/lumilauta2.png","Aloittelijalle sopiva lumilauta");
+insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("lumilauta","1",240,NULL,"product-images/talviurheilu/lumilauta3.png","Temppuiluun soveltuva lumilauta");
+insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("luistimet","1",111,NULL,"product-images/talviurheilu/luistimet1.png","Näillä luistimilla sinusta tulee NHL tähti!");
+insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("luistimet","1",99,NULL,"product-images/talviurheilu/luistimet2.png","Aloittelijalle sopivat luistimet");
+insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("luistimet","1",140,NULL,"product-images/talviurheilu/luistimet3.png","Pro-pelaajille sopivat luistimet");
+insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("taitoluistimet","1",111,NULL,"product-images/talviurheilu/taitoluistimet1.png","Aloittelijan taitoluistimet");
+insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("taitoluistimet","1",111,NULL,"product-images/talviurheilu/taitoluistimet2.png","Näillä luistimilla teet näyttävät piruetit!");
+insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("taitoluistimet","1",111,NULL,"product-images/talviurheilu/taitoluistimet3.png","Ammattitason taitoluistimet");
 
 
 
 /* KUNTOILU */
-insert into category (categoryname) values ("kuntoilu");
+insert into Category (categoryname) values ("kuntoilu");
 
-insert into product (productname,categoryid,price,sale,imgURL,descript) values ("käsipaino","2",80,NULL,"product-images/kuntoilu/kasipaino1.png","30 kilon käsipaino");
-insert into product (productname,categoryid,price,sale,imgURL,descript) values ("käsipaino","2",100,NULL,"product-images/kuntoilu/kasipaino2.png","Säädettävä käsipaino 20 kiloon asti");
-insert into product (productname,categoryid,price,sale,imgURL,descript) values ("käsipaino","2",70,NULL,"product-images/kuntoilu/kasipaino3.png","HEX-käsipaino 15 kiloa");
-insert into product (productname,categoryid,price,sale,imgURL,descript) values ("juoksumatto","2",299.99,NULL,"product-images/kuntoilu/juoksumatto1.png","Kevyempi rakenteinen juoksumatto");
-insert into product (productname,categoryid,price,sale,imgURL,descript) values ("juoksumatto","2",399.99,NULL,"product-images/kuntoilu/juoksumatto2.png","Juoksumatto kaltevuudensäädöllä");
-insert into product (productname,categoryid,price,sale,imgURL,descript) values ("juoksumatto","2",399.99,NULL,"product-images/kuntoilu/juoksumatto3.png","Kokoontaittuva juoksumatto");
-insert into product (productname,categoryid,price,sale,imgURL,descript) values ("kuntopyörä","2",209,NULL,"product-images/kuntoilu/kuntopyora1.png","Hyvä peli kuntoilijalle");
-insert into product (productname,categoryid,price,sale,imgURL,descript) values ("kuntopyörä","2",250,NULL,"product-images/kuntoilu/kuntopyora2.png","Kuntopyörä monilla eri säädöillä");
-insert into product (productname,categoryid,price,sale,imgURL,descript) values ("kuntopyörä","2",230,NULL,"product-images/kuntoilu/kuntopyora3.png","Kompakti kuntopyörä");
-insert into product (productname,categoryid,price,sale,imgURL,descript) values ("kahvakuula","2",49.99,NULL,"product-images/kuntoilu/kahvakuula1.png","7 kilon kahvakuula");
-insert into product (productname,categoryid,price,sale,imgURL,descript) values ("kahvakuula","2",49.99,NULL,"product-images/kuntoilu/kahvakuula2.png","10 kilon kahvakuula");
-insert into product (productname,categoryid,price,sale,imgURL,descript) values ("kahvakuula","2",49.99,NULL,"product-images/kuntoilu/kahvakuula3.png","15 kilon kahvakuula");
+insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("käsipaino","2",80,NULL,"product-images/kuntoilu/kasipaino1.png","30 kilon käsipaino");
+insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("käsipaino","2",100,NULL,"product-images/kuntoilu/kasipaino2.png","Säädettävä käsipaino 20 kiloon asti");
+insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("käsipaino","2",70,NULL,"product-images/kuntoilu/kasipaino3.png","HEX-käsipaino 15 kiloa");
+insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("juoksumatto","2",299.99,NULL,"product-images/kuntoilu/juoksumatto1.png","Kevyempi rakenteinen juoksumatto");
+insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("juoksumatto","2",399.99,NULL,"product-images/kuntoilu/juoksumatto2.png","Juoksumatto kaltevuudensäädöllä");
+insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("juoksumatto","2",399.99,NULL,"product-images/kuntoilu/juoksumatto3.png","Kokoontaittuva juoksumatto");
+insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("kuntopyörä","2",209,NULL,"product-images/kuntoilu/kuntopyora1.png","Hyvä peli kuntoilijalle");
+insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("kuntopyörä","2",250,NULL,"product-images/kuntoilu/kuntopyora2.png","Kuntopyörä monilla eri säädöillä");
+insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("kuntopyörä","2",230,NULL,"product-images/kuntoilu/kuntopyora3.png","Kompakti kuntopyörä");
+insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("kahvakuula","2",49.99,NULL,"product-images/kuntoilu/kahvakuula1.png","7 kilon kahvakuula");
+insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("kahvakuula","2",49.99,NULL,"product-images/kuntoilu/kahvakuula2.png","10 kilon kahvakuula");
+insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("kahvakuula","2",49.99,NULL,"product-images/kuntoilu/kahvakuula3.png","15 kilon kahvakuula");
 
 
 /* VESIURHEILU*/
-insert into category (categoryname) values ("vesiurheilu");
+insert into Category (categoryname) values ("vesiurheilu");
 
-insert into product (productname,categoryid,price,sale,imgURL,descript) values ("vesisukset","3",123.45,NULL,"product-images/vesiurheilu/vesisukset1.png","Näillä voit hiihtää vedessä ja leikkiä Jeesusta!");
-insert into product (productname,categoryid,price,sale,imgURL,descript) values ("vesisukset","3",90,NULL,"product-images/vesiurheilu/vesisukset2.png","Vesisukset aloittelijalle");
-insert into product (productname,categoryid,price,sale,imgURL,descript) values ("vesisukset","3",250,NULL,"product-images/vesiurheilu/vesisukset3.png","Ammattitason vesisukset");
-insert into product (productname,categoryid,price,sale,imgURL,descript) values ("räpylät","3",29,NULL,"product-images/vesiurheilu/rapylat1.png","Aloittelijan räpylät");
-insert into product (productname,categoryid,price,sale,imgURL,descript) values ("räpylät","3",39,NULL,"product-images/vesiurheilu/rapylat2.png","Hyvät räpylät harrastajalle");
-insert into product (productname,categoryid,price,sale,imgURL,descript) values ("räpylät","3",29,NULL,"product-images/vesiurheilu/rapylat3.png","Näillä räpylöillä pääset lujaa vedessä!");
-insert into product (productname,categoryid,price,sale,imgURL,descript) values ("uimalasit","3",9.50,NULL,"product-images/vesiurheilu/uimalasit1.png","Nämä mahdollistavat näkemisen vedessäkin");
-insert into product (productname,categoryid,price,sale,imgURL,descript) values ("uimalasit","3",15,NULL,"product-images/vesiurheilu/uimalasit2.png","Näillä voit laseilla sukeltaa suoraa 80-luvulle");
-insert into product (productname,categoryid,price,sale,imgURL,descript) values ("uimalasit","3",19.50,NULL,"product-images/vesiurheilu/uimalasit3.png","Jani Sievinenkin on uinut kyseisillä laseilla");
-insert into product (productname,categoryid,price,sale,imgURL,descript) values ("sup-lauta","3",49.99,NULL,"product-images/vesiurheilu/sup1.png","Täydellinen kapistus lämpimään kesäpäivään");
-insert into product (productname,categoryid,price,sale,imgURL,descript) values ("sup-lauta","3",149.99,NULL,"product-images/vesiurheilu/sup2.png","Ammattilaisen valinta!");
-insert into product (productname,categoryid,price,sale,imgURL,descript) values ("sup-lauta","3",130,NULL,"product-images/vesiurheilu/sup3.png","Aloittelijalle sopiva lauta");
+insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("vesisukset","3",123.45,NULL,"product-images/vesiurheilu/vesisukset1.png","Näillä voit hiihtää vedessä ja leikkiä Jeesusta!");
+insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("vesisukset","3",90,NULL,"product-images/vesiurheilu/vesisukset2.png","Vesisukset aloittelijalle");
+insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("vesisukset","3",250,NULL,"product-images/vesiurheilu/vesisukset3.png","Ammattitason vesisukset");
+insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("räpylät","3",29,NULL,"product-images/vesiurheilu/rapylat1.png","Aloittelijan räpylät");
+insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("räpylät","3",39,NULL,"product-images/vesiurheilu/rapylat2.png","Hyvät räpylät harrastajalle");
+insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("räpylät","3",29,NULL,"product-images/vesiurheilu/rapylat3.png","Näillä räpylöillä pääset lujaa vedessä!");
+insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("uimalasit","3",9.50,NULL,"product-images/vesiurheilu/uimalasit1.png","Nämä mahdollistavat näkemisen vedessäkin");
+insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("uimalasit","3",15,NULL,"product-images/vesiurheilu/uimalasit2.png","Näillä voit laseilla sukeltaa suoraa 80-luvulle");
+insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("uimalasit","3",19.50,NULL,"product-images/vesiurheilu/uimalasit3.png","Jani Sievinenkin on uinut kyseisillä laseilla");
+insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("sup-lauta","3",49.99,NULL,"product-images/vesiurheilu/sup1.png","Täydellinen kapistus lämpimään kesäpäivään");
+insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("sup-lauta","3",149.99,NULL,"product-images/vesiurheilu/sup2.png","Ammattilaisen valinta!");
+insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("sup-lauta","3",130,NULL,"product-images/vesiurheilu/sup3.png","Aloittelijalle sopiva lauta");
 
 
 /* MAILAPELIT */
-insert into category (categoryname) values ("mailapelit");
+insert into Category (categoryname) values ("mailapelit");
 
-insert into product (productname,categoryid,price,sale,imgURL,descript) values ("tennismaila","4",50,NULL,"product-images/mailapelit/tennis1.png","Jari Hedmanin nimikkomaila");
-insert into product (productname,categoryid,price,sale,imgURL,descript) values ("tennismaila","4",39.98,NULL,"product-images/mailapelit/tennis2.png","Tällä mailalla voit olla Jarkko Nieminen");
-insert into product (productname,categoryid,price,sale,imgURL,descript) values ("tennismaila","4",30,NULL,"product-images/mailapelit/tennis3.png","Aloittelijan maila");
-insert into product (productname,categoryid,price,sale,imgURL,descript) values ("pesäpallomaila","4",50,NULL,"product-images/mailapelit/pesapallo1.png","Tämä maila soveltuu harrastamiseen ja itsepuolustukseen");
-insert into product (productname,categoryid,price,sale,imgURL,descript) values ("pesäpallomaila","4",40,NULL,"product-images/mailapelit/pesapallo2.png","Niin pesäpalloon, kuin myös velkojen perintään");
-insert into product (productname,categoryid,price,sale,imgURL,descript) values ("pesäpallomaila","4",60,NULL,"product-images/mailapelit/pesapallo3.png","Hiilikuitumaila");
-insert into product (productname,categoryid,price,sale,imgURL,descript) values ("pöytätennismaila","4",19.99,NULL,"product-images/mailapelit/poytatennis1.png","Tällä päihität naapurisi tallipeleissä");
-insert into product (productname,categoryid,price,sale,imgURL,descript) values ("pöytätennismaila","4",29.99,NULL,"product-images/mailapelit/poytatennis2.png","Pro-maila");
-insert into product (productname,categoryid,price,sale,imgURL,descript) values ("pöytätennismaila","4",15,NULL,"product-images/mailapelit/poytatennis3.png","Aloittelijan maila");
-insert into product (productname,categoryid,price,sale,imgURL,descript) values ("jääkiekkomaila","4",49,NULL,"product-images/mailapelit/jaakiekko1.png","Ammattilaiselle");
-insert into product (productname,categoryid,price,sale,imgURL,descript) values ("jääkiekkomaila","4",29,NULL,"product-images/mailapelit/jaakiekko2.png","Junioreille");
-insert into product (productname,categoryid,price,sale,imgURL,descript) values ("jääkiekkomaila","4",35,NULL,"product-images/mailapelit/jaakiekko3.png","Harrastelijalle");
+insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("tennismaila","4",50,NULL,"product-images/mailapelit/tennis1.png","Jari Hedmanin nimikkomaila");
+insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("tennismaila","4",39.98,NULL,"product-images/mailapelit/tennis2.png","Tällä mailalla voit olla Jarkko Nieminen");
+insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("tennismaila","4",30,NULL,"product-images/mailapelit/tennis3.png","Aloittelijan maila");
+insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("pesäpallomaila","4",50,NULL,"product-images/mailapelit/pesapallo1.png","Tämä maila soveltuu harrastamiseen ja itsepuolustukseen");
+insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("pesäpallomaila","4",40,NULL,"product-images/mailapelit/pesapallo2.png","Niin pesäpalloon, kuin myös velkojen perintään");
+insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("pesäpallomaila","4",60,NULL,"product-images/mailapelit/pesapallo3.png","Hiilikuitumaila");
+insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("pöytätennismaila","4",19.99,NULL,"product-images/mailapelit/poytatennis1.png","Tällä päihität naapurisi tallipeleissä");
+insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("pöytätennismaila","4",29.99,NULL,"product-images/mailapelit/poytatennis2.png","Pro-maila");
+insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("pöytätennismaila","4",15,NULL,"product-images/mailapelit/poytatennis3.png","Aloittelijan maila");
+insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("jääkiekkomaila","4",49,NULL,"product-images/mailapelit/jaakiekko1.png","Ammattilaiselle");
+insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("jääkiekkomaila","4",29,NULL,"product-images/mailapelit/jaakiekko2.png","Junioreille");
+insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("jääkiekkomaila","4",35,NULL,"product-images/mailapelit/jaakiekko3.png","Harrastelijalle");
 
 
 /* PYÖRÄILY */
-insert into category (categoryname) values ("pyöraily");
+insert into Category (categoryname) values ("pyöraily");
 
-insert into product (productname,categoryid,price,sale,imgURL,descript) values ("maastopyörä","5",359.99,NULL,"product-images/pyoraily/maastopyora1.png","Hieno vihreä pyörä");
-insert into product (productname,categoryid,price,sale,imgURL,descript) values ("maastopyörä","5",459.99,NULL,"product-images/pyoraily/maastopyora2.png","Tällä pyörällä pääset lujjaa mehtässäkin!");
-insert into product (productname,categoryid,price,sale,imgURL,descript) values ("maastopyörä","5",559.99,NULL,"product-images/pyoraily/maastopyora3.png","Pro-pyörä");
-insert into product (productname,categoryid,price,sale,imgURL,descript) values ("kilpapyörä","5",300,NULL,"product-images/pyoraily/maantiepyora1.png","Tällä pyörällä voit osallistua Tour de Franceen");
-insert into product (productname,categoryid,price,sale,imgURL,descript) values ("kilpapyörä","5",300,NULL,"product-images/pyoraily/maantiepyora2.png","Harrastelijalle hyvä pyörä");
-insert into product (productname,categoryid,price,sale,imgURL,descript) values ("kilpapyörä","5",300,NULL,"product-images/pyoraily/maantiepyora3.png","Louis Armstrongin nimikkopyörä");
-insert into product (productname,categoryid,price,sale,imgURL,descript) values ("naistenpyörä","5",200,NULL,"product-images/pyoraily/naistenpyora1.png","Hieno punainen pyörä");
-insert into product (productname,categoryid,price,sale,imgURL,descript) values ("naistenpyörä","5",220,NULL,"product-images/pyoraily/naistenpyora2.png","Tästä vihreä retropyörä");
-insert into product (productname,categoryid,price,sale,imgURL,descript) values ("naistenpyörä","5",250,NULL,"product-images/pyoraily/naistenpyora3.png","Söpön värinen pyörä");
-insert into product (productname,categoryid,price,sale,imgURL,descript) values ("pyöräilykypärä","5",30,NULL,"product-images/pyoraily/pyorailykypara1.png","Miesten kypärä");
-insert into product (productname,categoryid,price,sale,imgURL,descript) values ("pyöräilykypärä","5",30,NULL,"product-images/pyoraily/pyorailykypara2.png","Naisten kypärä");
-insert into product (productname,categoryid,price,sale,imgURL,descript) values ("pyöräilykypärä","5",20,NULL,"product-images/pyoraily/pyorailykypara3.png","Lasten kypärä");
+insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("maastopyörä","5",359.99,NULL,"product-images/pyoraily/maastopyora1.png","Hieno vihreä pyörä");
+insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("maastopyörä","5",459.99,NULL,"product-images/pyoraily/maastopyora2.png","Tällä pyörällä pääset lujjaa mehtässäkin!");
+insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("maastopyörä","5",559.99,NULL,"product-images/pyoraily/maastopyora3.png","Pro-pyörä");
+insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("kilpapyörä","5",300,NULL,"product-images/pyoraily/maantiepyora1.png","Tällä pyörällä voit osallistua Tour de Franceen");
+insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("kilpapyörä","5",300,NULL,"product-images/pyoraily/maantiepyora2.png","Harrastelijalle hyvä pyörä");
+insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("kilpapyörä","5",300,NULL,"product-images/pyoraily/maantiepyora3.png","Louis Armstrongin nimikkopyörä");
+insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("naistenpyörä","5",200,NULL,"product-images/pyoraily/naistenpyora1.png","Hieno punainen pyörä");
+insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("naistenpyörä","5",220,NULL,"product-images/pyoraily/naistenpyora2.png","Tästä vihreä retropyörä");
+insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("naistenpyörä","5",250,NULL,"product-images/pyoraily/naistenpyora3.png","Söpön värinen pyörä");
+insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("pyöräilykypärä","5",30,NULL,"product-images/pyoraily/pyorailykypara1.png","Miesten kypärä");
+insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("pyöräilykypärä","5",30,NULL,"product-images/pyoraily/pyorailykypara2.png","Naisten kypärä");
+insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("pyöräilykypärä","5",20,NULL,"product-images/pyoraily/pyorailykypara3.png","Lasten kypärä");
 
 
 /* ASIAKAS*/
-insert into client (clientname,postalcode,clientaddress,phonenumber) values ("Matti","90500","ouluntie1","123456789");
+insert into Client (clientname,postalcode,clientaddress,phonenumber) values ("Matti","90500","ouluntie1","123456789");
 
 /* TILAUKSET*/
-insert into orders (clientid,orderdate,orderstate)VALUES("1","2023-03-24 11:40:01","");
+insert into Orders (clientid,orderdate,orderstate)VALUES("1","2023-03-24 11:40:01","");
 
 /* TILAUSRIVI*/
-insert into orderrow (ordernum,rownum,productid,pcs) VALUES ("1","1","1001","3");
+insert into Orderrow (ordernum,rownum,productid,pcs) VALUES ("1","1","1001","3");
