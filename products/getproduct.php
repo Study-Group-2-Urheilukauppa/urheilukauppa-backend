@@ -10,7 +10,7 @@ $product_id = $parts[count($parts)-1];
 
 try {
     $db = openDb();
-    $sql = "select * from product where productid = $product_id";
+    $sql = "select * from Product where productid = $product_id";
     $query = $db->query($sql);
     $results = $query->fetchALL(PDO::FETCH_ASSOC);
     header("HTTP/1.1 200 OK");

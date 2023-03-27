@@ -9,11 +9,11 @@ $category_id = $parts[count($parts)-1];
 
 try {
   $db = openDb();
-  $sql = "select * from category where categoryid = $category_id";
+  $sql = "select * from Category where categoryid = $category_id";
   $query = $db->query($sql);
   $category = $query->fetch(PDO::FETCH_ASSOC);
 
-  $sql = "select * from product where categoryid = $category_id";
+  $sql = "select * from Product where categoryid = $category_id";
   $query = $db->query($sql);
   $products = $query->fetchAll(PDO::FETCH_ASSOC);
 

@@ -13,7 +13,7 @@ $descript = filter_var($input->descript, FILTER_SANITIZE_STRING);
 
 try {
     $db = openDb();
-    $query = $db->prepare("INSERT INTO product(productname, categoryid, price, sale, imgURL, descript) VALUES
+    $query = $db->prepare("INSERT INTO Product(productname, categoryid, price, sale, imgURL, descript) VALUES
          (:productname, :categoryid, :price, :sale, :imgURL, :descript)");
     $query->bindValue(":productname", $productname, PDO::PARAM_STR);
     $query->bindValue(":categoryid", $categoryid, PDO::PARAM_STR);

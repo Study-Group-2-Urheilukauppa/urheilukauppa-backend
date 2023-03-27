@@ -9,7 +9,7 @@ $categoryname = filter_var($input->categoryname,FILTER_SANITIZE_FULL_SPECIAL_CHA
 
 try {
     $db = openDb();
-    $query = $db->prepare("insert into category(categoryname) values (:categoryname)");
+    $query = $db->prepare("insert into Category(categoryname) values (:categoryname)");
     $query->bindValue(":categoryname", $categoryname,PDO::PARAM_STR);
     $query->execute();
 
