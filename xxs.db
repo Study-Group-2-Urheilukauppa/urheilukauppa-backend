@@ -87,7 +87,7 @@ insert into product (productname,categoryid,price,sale,imgURL,descript) values (
 insert into product (productname,categoryid,price,sale,imgURL,descript) values ("juoksumatto","2",99.99,NULL,"","Hyvin rullaa");
 insert into product (productname,categoryid,price,sale,imgURL,descript) values ("lumilauta","1",215,NULL,"","Temppuiluun soveltuva lumilauta");
 insert into product (productname,categoryid,price,sale,imgURL,descript) values ("luistimet","1",111,NULL,"","Näillä luistimilla sinusta tulee NHL tähti!");
-insert into product (productname,categoryid,price,sale,imgURL,descript) values ("maastopyörä","5",459.99,NULL,"product-images\pyoraily\maastopyora1.png","Tällä pyörällä pääset lujjaa mehtässäkin!");
+insert into product (productname,categoryid,price,sale,imgURL,descript) values ("maastopyörä","5",459.99,NULL,"product-images/pyoraily/maastopyora1.png","Tällä pyörällä pääset lujjaa mehtässäkin!");
 insert into product (productname,categoryid,price,sale,imgURL,descript) values ("kuntopyörä","2",209,NULL,"","Kuntopyörä monilla eri säädöillä");
 insert into product (productname,categoryid,price,sale,imgURL,descript) values ("kahvakuula","2",49.99,NULL,"","Monikäyttöinen paino");
 insert into product (productname,categoryid,price,sale,imgURL,descript) values ("vesisukset","3",123.45,NULL,"","Näillä voit hiihtää vedessä ja leikkiä Jeesusta!");
