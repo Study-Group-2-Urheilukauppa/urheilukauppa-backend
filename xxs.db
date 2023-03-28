@@ -40,12 +40,13 @@ PRIMARY KEY (categoryid)
 
 CREATE TABLE Product (
 productid INT NOT NULL AUTO_INCREMENT,
-productname CHAR(30) NOT NULL,
+productname CHAR(50) NOT NULL,
 categoryid INT NOT NULL,
 price DECIMAL(5,2),
 sale INTEGER(2),
 imgURL VARCHAR(255),
-descript TEXT(1000),
+descript TINYTEXT,
+fulldescript TEXT,
 PRIMARY KEY (productid),
 FOREIGN KEY (categoryid)
     REFERENCES Category (categoryid)
@@ -76,90 +77,359 @@ PRIMARY KEY (ordernum, rownum),
 FOREIGN KEY (productid)
     REFERENCES Product (productid)
 );
-/* TALVIURHEILU */
-insert into Category (categoryname) values ("talviurheilu");
 
-insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("sukset","1",120,NULL,"product-images/talviurheilu/sukset1.png","Hienot sukset");
-insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("sukset","1",150,NULL,"product-images/talviurheilu/sukset2.png","Todella nopeat sukset");
-insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("sukset","1",115,NULL,"product-images/talviurheilu/sukset3.png","Temppuiluun sopivat sukset");
-insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("lumilauta","1",215,NULL,"product-images/talviurheilu/lumilauta1.png","Vauhdikas lumilauta");
-insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("lumilauta","1",180,NULL,"product-images/talviurheilu/lumilauta2.png","Aloittelijalle sopiva lumilauta");
-insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("lumilauta","1",240,NULL,"product-images/talviurheilu/lumilauta3.png","Temppuiluun soveltuva lumilauta");
-insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("luistimet","1",111,NULL,"product-images/talviurheilu/luistimet1.png","Näillä luistimilla sinusta tulee NHL tähti!");
-insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("luistimet","1",99,NULL,"product-images/talviurheilu/luistimet2.png","Aloittelijalle sopivat luistimet");
-insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("luistimet","1",140,NULL,"product-images/talviurheilu/luistimet3.png","Pro-pelaajille sopivat luistimet");
-insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("taitoluistimet","1",111,NULL,"product-images/talviurheilu/taitoluistimet1.png","Aloittelijan taitoluistimet");
-insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("taitoluistimet","1",111,NULL,"product-images/talviurheilu/taitoluistimet2.png","Näillä luistimilla teet näyttävät piruetit!");
-insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("taitoluistimet","1",111,NULL,"product-images/talviurheilu/taitoluistimet3.png","Ammattitason taitoluistimet");
+/* TALVIURHEILU */
+
+/* ADDING THE CATEGORY*/
+
+insert into Category (categoryname) values ("Talviurheilu");
+
+/*ADDING CONTENT TO PRODUCT*/
+
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("XDR 80 TI -laskettelusukset","1",120,NULL,"product-images/talviurheilu/sukset1.png",
+"XDR 80 TI -laskettelusukset ovat suunniteltu tarjoamaan erinomaisen suorituskyvyn rinteissä kaikentasoisille laskettelijoille.","XDR 80 TI -laskettelusukset ovat suunniteltu tarjoamaan 
+erinomaisen suorituskyvyn rinteissä kaikentasoisille laskettelijoille. Sukset ovat kevyet, kestävät ja vakaat, mikä tekee niistä helpon hallita kaikenlaisissa olosuhteissa. Niiden All-Terrain Rocker 
+-profiili antaa pehmeän ajon lumen päällä ja hyvän pidon kovemmalla alustalla. Näiden sukset tarjoavat erinomaista hallintaa ja vakautta kaikissa laskuissa.");
+
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Supershape i.Magnum -laskettelusukset","1",150,NULL,"product-images/talviurheilu/sukset2.png",
+"Supershape i.Magnum -laskettelusukset ovat loistava valinta kokeneille laskettelijoille, jotka haluavat parasta suorituskykyä rinteissä.","Supershape i.Magnum -laskettelusukset ovat loistava valinta 
+kokeneille laskettelijoille, jotka haluavat parasta suorituskykyä rinteissä. Sukset ovat kevyet ja kestävät, ja niiden korkea jäykkyys antaa erinomaisen vakauden korkeampissa vauhdeissa. 
+Niiden kapea profiili mahdollistaa nopean ja aggressiivisen ajon kovalla alustalla. Näiden sukset tarjoavat erinomaista hallintaa, nopeutta ja reagointikykyä vaativissa laskuissa.
+");
+
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("RC4 Worldcup SC -laskettelusukset","1",115,NULL,"product-images/talviurheilu/sukset3.png",
+"RC4 Worldcup SC -laskettelusukset ovat suunniteltu kilpailukäyttöön, mutta ne sopivat myös erinomaisesti vaativille laskijoille, jotka haluavat maksimaalista suorituskykyä rinteissä.",
+"RC4 Worldcup SC -laskettelusukset ovat suunniteltu kilpailukäyttöön, mutta ne sopivat myös erinomaisesti vaativille laskijoille, jotka haluavat maksimaalista suorituskykyä rinteissä. 
+Sukset ovat kevyet, kestävät ja erittäin vakaa nopeissa vauhdeissa. Niiden Camber-profiili antaa erinomaisen pidon kovalla alustalla ja hyvän kanttipidon kaarteissa. Näiden sukset tarjoavat 
+erinomaista hallintaa, nopeutta ja reagointikykyä kaikentasoisille laskettelijoille.");
+
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Custom Flying V -lumilauta","1",215,NULL,"product-images/talviurheilu/lumilauta1.png",
+"Custom Flying V -lumilauta on suunniteltu tarjoamaan huippuluokan suorituskyvyn kaikentasoisille lautailijoille.","Custom Flying V -lumilauta on suunniteltu tarjoamaan huippuluokan suorituskyvyn 
+kaikentasoisille lautailijoille. Lauta on kevyt ja kestävä, ja sen Flying V -profiili mahdollistaa helpon ja monipuolisen ajon kaikenlaisissa olosuhteissa. Lautojen vakaus ja pito on myös paranneltu,
+ mikä antaa lisää luottamusta ajamiseen ja korkeampia hyppyjä varten.");
+
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Raygun -lumilauta","1",180,NULL,"product-images/talviurheilu/lumilauta2.png",
+"Raygun -lumilauta on erinomainen valinta kaikentasoisille lautailijoille.","Raygun -lumilauta on erinomainen valinta kaikentasoisille lautailijoille. Lauta on suunniteltu antamaan erinomainen 
+tasapaino kestävyyden ja suorituskyvyn välillä. Sen Rocker profiili mahdollistaa helpon ja pehmeän ajon lumessa, kun taas Camber profiili antaa vakautta ja pitoa kovemmassa maastossa. Lauta on 
+myös kevyt, mikä tekee siitä helpon hallita kaikentyyppisissä laskuissa.");
+
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("One Magtek -lumilauta","1",240,NULL,"product-images/talviurheilu/lumilauta3.png",
+"One Magtek -lumilauta on erinomainen valinta kokeneille lautailijoille, jotka haluavat vaativia laskuja.","One Magtek -lumilauta on erinomainen valinta kokeneille lautailijoille, jotka haluavat 
+vaativia laskuja. Lauta on suunniteltu erityisesti lumilautailijoiden vaatimuksiin, ja sen Magnatraction-ominaisuus antaa erinomaisen pidon kaikissa laskuissa. Lauta on myös kevyt ja kestävä, 
+mikä tekee siitä helpon ja mukavan hallita kovemmassakin vauhdissa. One Magtek -lumilauta on loistava valinta vaativiin lumiolosuhteisiin ja korkean tason laskuihin.");
+
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Supreme S25 -jääkiekkoluistimet","1",111,NULL,"product-images/talviurheilu/luistimet1.png",
+"Supreme S25 -jääkiekkoluistimet ovat erinomainen valinta kaiken tasoisille pelaajille.","Supreme S25 -jääkiekkoluistimet ovat erinomainen valinta kaiken tasoisille pelaajille. Luistimissa 
+on korkea teräsuojus ja tukeva rakenne, joka tarjoaa erinomaisen tuen ja vakauden jääkiekko-otteluissa. Luistimissa on myös mukava sisävuori, joka pitää jalat kuivina ja miellyttävinä pelin 
+aikana. Terä on valmistettu kestävästä materiaalista ja antaa hyvän pidon jäällä.");
+
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Tacks 9060 -jääkiekkoluistimet","1",99,NULL,"product-images/talviurheilu/luistimet2.png",
+"Tacks 9060 -jääkiekkoluistimet ovat kevyet ja kestävät luistimet, jotka tarjoavat erinomaisen suorituskyvyn kaukalossa.","Tacks 9060 -jääkiekkoluistimet ovat kevyet ja kestävät luistimet, 
+jotka tarjoavat erinomaisen suorituskyvyn kaukalossa. Luistimissa on korkea teräsuojus ja tukeva rakenne, joka tarjoaa erinomaisen tuen ja vakauden jääkiekko-otteluissa. Luistimissa on myös 
+mukava sisävuori, joka pitää jalat kuivina ja miellyttävinä pelin aikana. Terä on valmistettu kestävästä materiaalista ja antaa hyvän pidon jäällä.");
+
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Supra 709 -jääkiekkoluistimet","1",140,NULL,"product-images/talviurheilu/luistimet3.png",
+"Supra 709 -jääkiekkoluistimet ovat laadukkaat ja kestävät luistimet, jotka on suunniteltu tarjoamaan erinomaista suorituskykyä kaukalossa.","Supra 709 -jääkiekkoluistimet ovat laadukkaat ja 
+kestävät luistimet, jotka on suunniteltu tarjoamaan erinomaista suorituskykyä kaukalossa. Luistimissa on korkea teräsuojus ja tukeva rakenne, joka tarjoaa erinomaisen tuen ja vakauden jääkiekko-otteluissa. 
+Luistimissa on myös mukava sisävuori, joka pitää jalat kuivina ja miellyttävinä pelin aikana. Terä on valmistettu korkealaatuisesta materiaalista ja antaa erinomaisen pidon jäällä. 
+Supra 709 -luistimissa on myös kevyt rakenne, joka parantaa pelaajan liikkuvuutta ja nopeutta jäällä.");
+
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Mystique -taitoluistimet","1",111,NULL,"product-images/talviurheilu/taitoluistimet1.png",
+"Mystique -taitoluistimet ovat erinomainen valinta aloitteleville taitoluistelijoille, jotka etsivät tasapainoa mukavuuden ja suorituskyvyn välillä.","Mystique -taitoluistimet ovat erinomainen 
+valinta aloitteleville taitoluistelijoille, jotka etsivät tasapainoa mukavuuden ja suorituskyvyn välillä. Näiden luistimien terä on valmistettu teräksestä, mikä tarjoaa hyvän kestävyyden ja pidon 
+jään pinnalla. Sisävuori on pehmeä ja mukava, mutta samalla tarjoaa tarpeeksi tukea ja vakautta. Näiden taitoluistimien ulkoasu on myös tyylikäs ja moderni.");
+
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Chorus -taitoluistimet","1",111,NULL,"product-images/talviurheilu/taitoluistimet2.png",
+"Chorus -taitoluistimet ovat loistava valinta edistyneille taitoluistelijoille, jotka haluavat parasta suorituskykyä ja tyyliä.","Chorus -taitoluistimet ovat loistava valinta edistyneille 
+taitoluistelijoille, jotka haluavat parasta suorituskykyä ja tyyliä. Näiden luistimien terä on valmistettu hiiliteräksestä, mikä tekee siitä kevyen ja kestävän. Sisävuori on erittäin mukava ja pehmeä, 
+mutta samalla tarjoaa erinomaisen tuen ja vakauden kaikissa liikkeissä. Näiden taitoluistimien ulkoasu on myös erittäin tyylikäs ja huomiota herättävä.");
+
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("875 -taitoluistimet","1",111,NULL,"product-images/talviurheilu/taitoluistimet3.png",
+"875 -taitoluistimet ovat huippuluokan luistimet, jotka on suunniteltu ammattilaisille ja kilpailijoille.","875 -taitoluistimet ovat huippuluokan luistimet, jotka on suunniteltu ammattilaisille ja 
+kilpailijoille. Näiden luistimien terä on valmistettu korkealaatuisesta hiiliteräksestä, mikä tarjoaa erinomaisen kestävyyden ja pidon jään pinnalla. Sisävuori on valmistettu korkealaatuisesta nahasta,
+ joka tarjoaa erinomaisen tuen ja vakauden kaikissa liikkeissä. Näiden taitoluistimien ulkoasu on myös erittäin tyylikäs ja ammattimainen.");
 
 
 
 /* KUNTOILU */
-insert into Category (categoryname) values ("kuntoilu");
 
-insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("käsipaino","2",80,NULL,"product-images/kuntoilu/kasipaino1.png","30 kilon käsipaino");
-insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("käsipaino","2",100,NULL,"product-images/kuntoilu/kasipaino2.png","Säädettävä käsipaino 20 kiloon asti");
-insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("käsipaino","2",70,NULL,"product-images/kuntoilu/kasipaino3.png","HEX-käsipaino 15 kiloa");
-insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("juoksumatto","2",299.99,NULL,"product-images/kuntoilu/juoksumatto1.png","Kevyempi rakenteinen juoksumatto");
-insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("juoksumatto","2",399.99,NULL,"product-images/kuntoilu/juoksumatto2.png","Juoksumatto kaltevuudensäädöllä");
-insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("juoksumatto","2",399.99,NULL,"product-images/kuntoilu/juoksumatto3.png","Kokoontaittuva juoksumatto");
-insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("kuntopyörä","2",209,NULL,"product-images/kuntoilu/kuntopyora1.png","Hyvä peli kuntoilijalle");
-insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("kuntopyörä","2",250,NULL,"product-images/kuntoilu/kuntopyora2.png","Kuntopyörä monilla eri säädöillä");
-insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("kuntopyörä","2",230,NULL,"product-images/kuntoilu/kuntopyora3.png","Kompakti kuntopyörä");
-insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("kahvakuula","2",49.99,NULL,"product-images/kuntoilu/kahvakuula1.png","7 kilon kahvakuula");
-insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("kahvakuula","2",49.99,NULL,"product-images/kuntoilu/kahvakuula2.png","10 kilon kahvakuula");
-insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("kahvakuula","2",49.99,NULL,"product-images/kuntoilu/kahvakuula3.png","15 kilon kahvakuula");
+/* ADDING THE CATEGORY */
+insert into Category (categoryname) values ("Kuntoilu");
+
+/*ADDING CONTENT TO PRODUCT*/
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("SelectTech -käsipaino","2",80,NULL,"product-images/kuntoilu/kasipaino1.png",
+"SelectTech -käsipaino on innovatiivinen ja monipuolinen käsipaino, joka tarjoaa 15 eri painovaihtoehtoa yhdessä kompaktissa paketissa.","SelectTech -käsipaino on innovatiivinen ja monipuolinen 
+käsipaino, joka tarjoaa 15 eri painovaihtoehtoa yhdessä kompaktissa paketissa. Painojen säätäminen on helppoa, sillä ne voi säätää napin painalluksella haluttuun painoon. Käsipainojen 
+ergonominen muotoilu takaa hyvän otteen ja niiden kevyt rakenne mahdollistaa monipuoliset harjoitukset myös pienessä tilassa. SelectTech -käsipaino on erinomainen valinta niille, jotka etsivät 
+monipuolista ja helppokäyttöistä käsipainoa kotitreeneihin.");
+
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Sports Käsipainot","2",100,NULL,"product-images/kuntoilu/kasipaino2.png",
+"Sports Käsipainot ovat kestävät ja laadukkaat käsipainot, jotka sopivat erinomaisesti niin kotitreeneihin kuin kuntosalillekin.","Sports Käsipainot ovat kestävät ja laadukkaat 
+käsipainot, jotka sopivat erinomaisesti niin kotitreeneihin kuin kuntosalillekin. Käsipainojen pinta on naarmuton ja niiden muotoilu mahdollistaa monipuoliset harjoitukset. 
+Käsipainojen paino on merkitty selvästi niiden kylkeen, joten niiden käyttö on helppoa ja vaivatonta. Gorilla Sports Käsipainot ovat saatavilla eri painoisina, joten voit valita juuri sopivan 
+painoisen käsipainon omaan treeniisi. Tämä on erinomainen valinta kaikille, jotka haluavat laadukkaan ja kestävän käsipainon.");
+
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Fitness Käsipainot","2",70,NULL,"product-images/kuntoilu/kasipaino3.png",
+"Fitness Käsipainot ovat erittäin kestävät ja laadukkaat käsipainot, jotka sopivat erinomaisesti monenlaisiin treeneihin.","Fitness Käsipainot ovat erittäin kestävät ja laadukkaat käsipainot, 
+jotka sopivat erinomaisesti monenlaisiin treeneihin. Käsipainojen ergonominen muotoilu takaa hyvän otteen ja niiden naarmuton pinta takaa paremman pidon treenatessa. Käsipainojen paino on 
+merkitty selvästi niiden kylkeen, joten niiden käyttö on helppoa ja vaivatonta. Fitness Käsipainot ovat saatavilla eri painoisina, joten voit valita juuri sopivan painoisen käsipainon omaan 
+treeniisi. Tämä on erinomainen valinta niille, jotka haluavat laadukkaan ja kestävän käsipainon, joka kestää käyttöä vuosien ajan.");
+
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Commercial 1750 -juoksumatto","2",299.99,NULL,"product-images/kuntoilu/juoksumatto1.png",
+"Commercial 1750 -juoksumatto on suunniteltu tarjoamaan korkealaatuista juoksu- ja kävelykokemusta kotona.","Commercial 1750 -juoksumatto on suunniteltu tarjoamaan korkealaatuista juoksu- 
+ja kävelykokemusta kotona. Sen 3.75 hevosvoiman moottori mahdollistaa nopeuden säädön 0-22 km/h välillä. Juoksualusta on 55 cm leveä ja 152 cm pitkä, joka tarjoaa runsaasti tilaa kävelyyn 
+ja juoksuun. Juoksumatolla on myös 10-tuumainen kosketusnäyttö, jonka avulla voit seurata harjoittelutietojasi ja käyttää monipuolisia harjoitusohjelmia. Commercial 1750 on erinomainen valinta 
+kenelle tahansa, joka haluaa korkealaatuisen juoksumaton kotikäyttöön.");
+
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Pro 2000 -juoksumatto","2",399.99,NULL,"product-images/kuntoilu/juoksumatto2.png",
+"Pro 2000 -juoksumatto on erinomainen valinta kestävyyttä ja kehonkuntoa parantavaan harjoitteluun kotona.","Pro 2000 -juoksumatto on erinomainen valinta kestävyyttä ja kehonkuntoa parantavaan 
+harjoitteluun kotona. Juoksumatossa on 3.5 hevosvoiman moottori, joka mahdollistaa nopeuden säädön 0-22 km/h välillä. Sen leveä juoksualusta tarjoaa mukavan tilan kävelyyn ja juoksuun. 
+Juoksumatossa on myös 7-tuumainen kosketusnäyttö, joka tarjoaa reaaliaikaiset harjoittelutiedot ja monipuoliset harjoitusohjelmat. Pro 2000 on erinomainen valinta kotikäyttöön niille, 
+jotka haluavat parantaa kestävyyttään ja kehonkuntoaan.");
+
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Fitness F3 -juoksumatto","2",399.99,NULL,"product-images/kuntoilu/juoksumatto3.png",
+"Fitness F3 -juoksumatto on tyylikäs ja monipuolinen juoksumatto, joka sopii erinomaisesti kotikäyttöön.","Fitness F3 -juoksumatto on tyylikäs ja monipuolinen juoksumatto, joka sopii 
+erinomaisesti kotikäyttöön. Juoksumatossa on 3.0 hevosvoiman moottori, jonka nopeuden säätö on välillä 0-16 km/h. Sen juoksualusta on 51 cm leveä ja 140 cm pitkä. Fitness F3 -juoksumatossa 
+on myös LED-näyttö, joka näyttää harjoittelutietosi ja tarjoaa monipuoliset harjoitusohjelmat. Juoksumatto on lisäksi helppo taittaa kokoon, joten se vie vähän tilaa silloin kun sitä ei käytetä. 
+Fitness F3 on erinomainen valinta niille, jotka haluavat laadukkaan juoksumaton, joka on helppo säilyttää.");
+
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Commercial S22i Studio Cycle","2",209,NULL,"product-images/kuntoilu/kuntopyora1.png",
+"Commercial S22i Studio Cycle on kehittynyt kuntopyörä, joka tarjoaa interaktiivisen harjoittelukokemuksen.","Commercial S22i Studio Cycle on kehittynyt kuntopyörä, joka tarjoaa interaktiivisen 
+harjoittelukokemuksen. Sen 22-tuumainen HD-kosketusnäyttö näyttää upeita virtuaalimatkoja ympäri maailmaa ja tarjoaa reaaliaikaisen ohjauksen ja motivoinnin valmentajilta. Käyttäjä voi säätää 
+laitteeseen sopivan istuimen ja ohjaustangon korkeuden ja kulman, jotta harjoittelu olisi mahdollisimman mukavaa. Pyörän magneettivastus tarjoaa 24 erilaista vastusohjelmaa ja sen kehittynyt 
+äänijärjestelmä mahdollistaa musiikin tai ohjauksen kuuntelemisen Bluetooth-yhteyden kautta. Tämä on erinomainen valinta henkilöille, jotka haluavat tehokkaan ja monipuolisen kuntopyörän kotitreeneihin.");
+
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("IC4 -kuntopyörä","2",250,NULL,"product-images/kuntoilu/kuntopyora2.png",
+"IC4 -kuntopyörä on kestävä ja monipuolinen kuntopyörä, joka on suunniteltu vaativaan treenaamiseen.","IC4 -kuntopyörä on kestävä ja monipuolinen kuntopyörä, joka on suunniteltu vaativaan treenaamiseen. 
+Sen magneettivastus tarjoaa 100 eri vastusohjelmaa ja sen LCD-näyttö seuraa harjoittelun edistymistä. Käyttäjä voi säätää pyörän istuimen ja ohjaustangon korkeuden ja kulman sopivaksi omaan treeniinsä. 
+IC4 -kuntopyörässä on myös monipuoliset harjoitteluohjelmat, kuten sykemittari, intervalliharjoittelut ja FTP-testausohjelma. Tämä on erinomainen valinta henkilöille, jotka haluavat monipuolisen 
+kuntopyörän kuntosalille tai kotitreeneihin.");
+
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("ZJET 430 -kuntopyörä","2",230,NULL,"product-images/kuntoilu/kuntopyora3.png",
+"ZJET 430 -kuntopyörä on tyylikäs ja monipuolinen kuntopyörä, joka sopii niin aloittelijoille kuin kokeneemmillekin harjoittelijoille.","ZJET 430 -kuntopyörä on tyylikäs ja monipuolinen kuntopyörä, 
+joka sopii niin aloittelijoille kuin kokeneemmillekin harjoittelijoille. Sen magneettivastus tarjoaa 32 eri vastusohjelmaa ja sen LCD-näyttö seuraa harjoittelun edistymistä. Käyttäjä voi säätää pyörän 
+istuimen ja ohjaustangon korkeuden ja kulman sopivaksi omaan treeniinsä. ZJET 430 -kuntopyörässä on myös monipuoliset harjoitteluohjelmat, kuten sykemittari, intervalliharjoittelut ja FTP-testausohjelma. 
+Tämä on erinomainen valinta henkilöille, jotka haluavat monipuolisen ja edullisen kuntopyörän kotitreeneihin.");
+
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Kings -kahvakuula","2",49.99,NULL,"product-images/kuntoilu/kahvakuula1.png",
+"Kings -kahvakuula on valmistettu korkealaatuisesta teräksestä ja sen muotoilu takaa tehokkaan treenin.","Kings -kahvakuula on valmistettu korkealaatuisesta teräksestä ja sen muotoilu takaa tehokkaan treenin. 
+Kahvakuula on saatavilla monessa eri koossa, joten voit valita juuri sopivan painoisen kahvakuulan omaan treeniisi. Kings -kahvakuula on helppo pitää puhtaana, sillä sen pinta on sileä ja naarmuton. 
+Tämä on erinomainen valinta niille, jotka haluavat monipuolisen treenivälineen kotiin tai kuntosalille.");
+
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Iron Cast -kahvakuula","2",49.99,NULL,"product-images/kuntoilu/kahvakuula2.png",
+"Iron Cast -kahvakuula on erittäin kestävä ja sen pinta on käsitelty erityisellä maalauksella, joka takaa paremman otteen treenatessa.","Iron Cast -kahvakuula on erittäin kestävä ja sen pinta on käsitelty 
+erityisellä maalauksella, joka takaa paremman otteen treenatessa. Kahvakuulan muotoilu mahdollistaa monipuoliset treenit ja sen kaareva kahva sopii käteen erinomaisesti. Kahvakuula on saatavilla eri painoisina, 
+joten voit valita juuri sopivan painoisen kahvakuulan treeneihisi. Iron Cast -kahvakuula on erinomainen valinta kehonpainoharjoittelun lisäksi myös kuntoilijoille, jotka haluavat tehostaa treeniään.");
+
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Kettlebell -kahvakuula","2",49.99,NULL,"product-images/kuntoilu/kahvakuula3.png",
+"Kettlebell -kahvakuula on tyylikäs ja monipuolinen treeniväline, joka sopii kaikentyyppisiin treeneihin.","Kettlebell -kahvakuula on tyylikäs ja monipuolinen treeniväline, joka sopii kaikentyyppisiin treeneihin. 
+Kahvakuulan pinta on pehmeä ja naarmuton, mikä takaa paremman otteen treenatessa. Sen kahva on suunniteltu kaarevaksi, joten se sopii käteen erittäin hyvin. Kettlebell -kahvakuula on saatavilla eri painoisina, 
+joten voit valita juuri sopivan painoisen kahvakuulan omaan treeniisi. Tämä on erinomainen valinta kaikille, jotka haluavat monipuolisen treenivälineen kotiin tai kuntosalille.");
 
 
 /* VESIURHEILU*/
-insert into Category (categoryname) values ("vesiurheilu");
 
-insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("vesisukset","3",123.45,NULL,"product-images/vesiurheilu/vesisukset1.png","Näillä voit hiihtää vedessä ja leikkiä Jeesusta!");
-insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("vesisukset","3",90,NULL,"product-images/vesiurheilu/vesisukset2.png","Vesisukset aloittelijalle");
-insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("vesisukset","3",250,NULL,"product-images/vesiurheilu/vesisukset3.png","Ammattitason vesisukset");
-insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("räpylät","3",29,NULL,"product-images/vesiurheilu/rapylat1.png","Aloittelijan räpylät");
-insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("räpylät","3",39,NULL,"product-images/vesiurheilu/rapylat2.png","Hyvät räpylät harrastajalle");
-insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("räpylät","3",29,NULL,"product-images/vesiurheilu/rapylat3.png","Näillä räpylöillä pääset lujaa vedessä!");
-insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("uimalasit","3",9.50,NULL,"product-images/vesiurheilu/uimalasit1.png","Nämä mahdollistavat näkemisen vedessäkin");
-insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("uimalasit","3",15,NULL,"product-images/vesiurheilu/uimalasit2.png","Näillä voit laseilla sukeltaa suoraa 80-luvulle");
-insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("uimalasit","3",19.50,NULL,"product-images/vesiurheilu/uimalasit3.png","Jani Sievinenkin on uinut kyseisillä laseilla");
-insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("sup-lauta","3",49.99,NULL,"product-images/vesiurheilu/sup1.png","Täydellinen kapistus lämpimään kesäpäivään");
-insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("sup-lauta","3",149.99,NULL,"product-images/vesiurheilu/sup2.png","Ammattilaisen valinta!");
-insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("sup-lauta","3",130,NULL,"product-images/vesiurheilu/sup3.png","Aloittelijalle sopiva lauta");
+/* ADDING THE CATEGORY*/
+insert into Category (categoryname) values ("Vesiurheilu");
+
+/*ADDING CONTENT TO PRODUCT*/
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Jr. Vesisukset","3",123.45,NULL,"product-images/vesiurheilu/vesisukset1.png",
+"Jr. Vesisukset ovat erinomainen valinta lapsille ja nuorille, jotka haluavat nauttia vesisuksista.","Jr. Vesisukset ovat erinomainen valinta lapsille ja nuorille, jotka haluavat nauttia vesisuksista. 
+Nämä vesisukset ovat valmistettu kestävästä materiaalista ja niissä on säädettävä sitomistoiminto, joka sopii eri jalkakokoille. Vesisukset ovat helppo käyttää ja niiden muotoilu on suunniteltu 
+aloittelijaystävälliseksi. Nämä vesisukset ovat loistava tapa oppia uusia taitoja vedessä.");
+
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Sports Burner Pro Vesisukset","3",90,NULL,"product-images/vesiurheilu/vesisukset2.png",
+"Sports Burner Pro Vesisukset ovat loistava valinta kokeneille vesisukeltajille, jotka etsivät huippuluokan suorituskykyä ja kestävyyttä.","Sports Burner Pro Vesisukset ovat loistava valinta 
+kokeneille vesisukeltajille, jotka etsivät huippuluokan suorituskykyä ja kestävyyttä. Vesisukset on valmistettu korkealaatuisesta materiaalista ja niissä on hyvä tasapaino ja kovuus, 
+joka tarjoaa vakauden ja suorituskyvyn vedessä. Säädettävän sitomistoiminnon ansiosta nämä vesisukset sopivat eri jalkakokoille. Nämä vesisukset ovat loistava valinta kaikille, 
+jotka haluavat kokeilla uusia temppuja ja taitoja vedessä.");
+
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Allegre Combo Vesisukset","3",250,NULL,"product-images/vesiurheilu/vesisukset3.png",
+"Allegre Combo Vesisukset ovat loistava valinta kaikenlaisille vesisukeltajille.","Allegre Combo Vesisukset ovat loistava valinta kaikenlaisille vesisukeltajille. Nämä vesisukset on 
+valmistettu korkealaatuisesta materiaalista ja niissä on säädettävä sitomistoiminto, joka sopii eri jalkakokoille. Vesisukset ovat helppo käyttää ja niiden muotoilu on suunniteltu 
+aloittelijaystävälliseksi. Vesisukset tarjoavat vakauden ja suorituskyvyn vedessä, joten ne sopivat hyvin temppujen harjoitteluun ja vauhdikkaaseen laskuun. Nämä vesisukset ovat 
+loistava tapa nauttia vedessä vietetystä ajasta.");
+
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Palau -räpylät","3",29,NULL,"product-images/vesiurheilu/rapylat1.png",
+"Palau -räpylät ovat erinomainen valinta snorklaajille ja vapaasukeltajille.","Palau -räpylät ovat erinomainen valinta snorklaajille ja vapaasukeltajille. Näissä räpylöissä on 
+avoin kantapää, mikä tekee niistä helppoja laittaa jalkaan ja säätää sopivaksi. Räpylöiden terä on valmistettu erittäin kestävästä materiaalista, joka tarjoaa hyvän potkutehon 
+ja kestää kulutusta. Räpylöiden kompakti koko tekee niistä helppoja kuljettaa mukana matkoilla.");
+
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Avanti Quattro + -räpylät","3",39,NULL,"product-images/vesiurheilu/rapylat2.png",
+"Avanti Quattro + -räpylät ovat huippuluokan räpylät, jotka on suunniteltu kokeneille sukeltajille.","Avanti Quattro + -räpylät ovat huippuluokan räpylät, jotka on suunniteltu 
+kokeneille sukeltajille. Näiden räpylöiden terä on valmistettu kestävästä materiaalista, joka tarjoaa erinomaisen potkutehon ja kestää kulutusta. Räpylöiden avoin kantapää on helppo 
+laittaa jalkaan ja säätää sopivaksi. Räpylöiden erityinen muotoilu tekee niistä erittäin tehokkaat ja nopeat vedessä.");
+
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Lung Stratos 3 -räpylät","3",29,NULL,"product-images/vesiurheilu/rapylat3.png",
+"Lung Stratos 3 -räpylät ovat huippuluokan räpylät, jotka on suunniteltu ammattilaisille ja kilpailijoille.","Lung Stratos 3 -räpylät ovat huippuluokan räpylät, jotka on suunniteltu 
+ammattilaisille ja kilpailijoille. Näiden räpylöiden terä on valmistettu erittäin kestävästä materiaalista, joka tarjoaa erinomaisen potkutehon ja kestää kulutusta. Räpylöiden anatomisesti 
+muotoiltu kantapääosa takaa erinomaisen istuvuuden ja vakauden vedessä. Räpylöiden erityinen muotoilu tekee niistä erittäin tehokkaat ja nopeat vedessä, ja niitä voidaan käyttää niin sukelluksessa kuin snorklauksessa.");
+
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Biofuse Flexiseal -uimalasit","3",9.50,NULL,"product-images/vesiurheilu/uimalasit1.png",
+"Biofuse Flexiseal -uimalasit tarjoavat erinomaisen istuvuuden ja mukavuuden vedessä.","Biofuse Flexiseal -uimalasit tarjoavat erinomaisen istuvuuden ja mukavuuden vedessä. Lasisarja on 
+valmistettu korkealaatuisesta materiaalista ja niissä on innovatiivinen Flexiseal-tekniikka, joka vähentää painetta silmien ympärillä. Lasisarjan leveä näkökenttä tarjoaa selkeän näkyvyyden 
+vedessä, ja säädettävä silikonihihna takaa istuvuuden kaikille pään muodoille. Nämä uimalasit ovat loistava valinta kaikenlaisille uimareille.");
+
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Cobra Ultra -uimalasit","3",15,NULL,"product-images/vesiurheilu/uimalasit2.png",
+"Cobra Ultra -uimalasit ovat suunniteltu kilpauimareille, jotka vaativat huippuluokan suorituskykyä ja kestävyyttä.","Cobra Ultra -uimalasit ovat suunniteltu kilpauimareille, jotka vaativat 
+huippuluokan suorituskykyä ja kestävyyttä. Lasisarja on valmistettu korkealaatuisesta materiaalista, joka kestää kulutusta ja tarjoaa selkeän näkyvyyden vedessä. Lasien äärimmäinen istuvuus 
+takaa, että ne pysyvät tiiviisti paikoillaan ja tarjoavat hyvän suojan vedessä. Uimalasien leveä näkökenttä ja vähäinen vedenkäyttö tekevät niistä loistavan valinnan kilpailukäyttöön.");
+
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Special Ops 2.0 -uimalasit","3",19.50,NULL,"product-images/vesiurheilu/uimalasit3.png",
+"Special Ops 2.0 -uimalasit ovat erinomainen valinta vaativille uimareille, jotka haluavat erinomaisen istuvuuden ja kestävyyden.","Special Ops 2.0 -uimalasit ovat erinomainen valinta vaativille uimareille, 
+jotka haluavat erinomaisen istuvuuden ja kestävyyden. Lasisarja on valmistettu korkealaatuisesta materiaalista ja niissä on kestävä, hypoallergeeninen silikonitiiviste, joka sopii kaikenlaisille ihoille. 
+Uimalasien leveä näkökenttä ja säädettävä silikonihihna tarjoavat erinomaisen istuvuuden ja mukavuuden vedessä. Näitä uimalaseja suositellaan erityisesti triathlon- ja avovesi-uintiin.");
+
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Co Ride 10'6 -SUP-lauta","3",49.99,NULL,"product-images/vesiurheilu/sup1.png",
+"Co Ride 10'6 -SUP-lauta on erinomainen valinta aloitteleville SUP-lautailijoille.","Co Ride 10'6 -SUP-lauta on erinomainen valinta aloitteleville SUP-lautailijoille. Tämä kestävä ja vakaa lautamalli 
+sopii erinomaisesti perheen yhteisille retkille ja hauskanpitoon vedessä. Lauta on valmistettu korkealaatuisesta materiaalista, joka kestää kulutusta ja tarjoaa hyvän vakauden vedessä. Lauta on myös helppo 
+kuljettaa mukana, sillä se on kevyt ja voidaan taittaa kokoon.");
+
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("All Star 12'6 -SUP-lauta","3",149.99,NULL,"product-images/vesiurheilu/sup2.png",
+"All Star 12'6 -SUP-lauta on kilpailukäyttöön suunniteltu huippuluokan lautamalli.","All Star 12'6 -SUP-lauta on kilpailukäyttöön suunniteltu huippuluokan lautamalli. Tämä erittäin kevyt ja nopea lautamalli 
+tarjoaa erinomaisen suorituskyvyn ja on suosittu valinta ammattilaislautailijoille ympäri maailman. Lauta on valmistettu kestävästä materiaalista, joka kestää kulutusta ja tarjoaa erinomaisen vakauden vedessä. 
+Lautaa on myös helppo kuljettaa mukana, sillä se voidaan taittaa kokoon.");
+
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Marina Breeze -SUP-lauta","3",130,NULL,"product-images/vesiurheilu/sup3.png",
+"Marina Breeze -SUP-lauta on edullinen ja käytännöllinen valinta harrastelijoille ja perheille.","Marina Breeze -SUP-lauta on edullinen ja käytännöllinen valinta harrastelijoille ja perheille. 
+Tämä kestävä ja vakaa lautamalli sopii erinomaisesti mataliin vesiin ja rauhalliseen aallokkoon. Lauta on valmistettu laadukkaasta materiaalista, joka kestää kulutusta ja tarjoaa hyvän vakauden vedessä. 
+Lautaa on helppo kuljettaa mukana, sillä se voidaan taittaa kokoon ja pakata mukana tulevaan laukkuun.");
 
 
 /* MAILAPELIT */
-insert into Category (categoryname) values ("mailapelit");
 
-insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("tennismaila","4",50,NULL,"product-images/mailapelit/tennis1.png","Jari Hedmanin nimikkomaila");
-insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("tennismaila","4",39.98,NULL,"product-images/mailapelit/tennis2.png","Tällä mailalla voit olla Jarkko Nieminen");
-insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("tennismaila","4",30,NULL,"product-images/mailapelit/tennis3.png","Aloittelijan maila");
-insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("pesäpallomaila","4",50,NULL,"product-images/mailapelit/pesapallo1.png","Tämä maila soveltuu harrastamiseen ja itsepuolustukseen");
-insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("pesäpallomaila","4",40,NULL,"product-images/mailapelit/pesapallo2.png","Niin pesäpalloon, kuin myös velkojen perintään");
-insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("pesäpallomaila","4",60,NULL,"product-images/mailapelit/pesapallo3.png","Hiilikuitumaila");
-insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("pöytätennismaila","4",19.99,NULL,"product-images/mailapelit/poytatennis1.png","Tällä päihität naapurisi tallipeleissä");
-insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("pöytätennismaila","4",29.99,NULL,"product-images/mailapelit/poytatennis2.png","Pro-maila");
-insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("pöytätennismaila","4",15,NULL,"product-images/mailapelit/poytatennis3.png","Aloittelijan maila");
-insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("jääkiekkomaila","4",49,NULL,"product-images/mailapelit/jaakiekko1.png","Ammattilaiselle");
-insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("jääkiekkomaila","4",29,NULL,"product-images/mailapelit/jaakiekko2.png","Junioreille");
-insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("jääkiekkomaila","4",35,NULL,"product-images/mailapelit/jaakiekko3.png","Harrastelijalle");
+/* ADDING THE CATEGORY*/
+insert into Category (categoryname) values ("Mailapelit");
+
+/*ADDING CONTENT TO PRODUCT*/
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Pro Staff RF97 Autograph -tennismaila","4",50,NULL,"product-images/mailapelit/tennis1.png",
+"Pro Staff RF97 Autograph -tennismaila on yksi maailman suosituimmista mailoista ja se on suunniteltu erityisesti Roger Federerin tarpeisiin.","Pro Staff RF97 Autograph -tennismaila on yksi maailman suosituimmista 
+mailoista ja se on suunniteltu erityisesti Roger Federerin tarpeisiin. Maila on valmistettu korkealaatuisesta hiilikuidusta ja sen tasapainotettu painopiste tarjoaa erinomaisen tuntuman ja lyöntivoiman. 
+Mailan 16x19-särmäyskuvio tarjoaa tarkkuutta ja lisää vauhtia lyönteihin. Tämä maila on erinomainen valinta pelaajille, jotka etsivät mailaa, joka tarjoaa sekä voimaa että tarkkuutta.");
+
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Pure Drive -tennismaila","4",39.98,NULL,"product-images/mailapelit/tennis2.png",
+"Pure Drive -tennismaila on suunniteltu tarjoamaan pelaajalle maksimaalisen voiman ja tarkkuuden.","Pure Drive -tennismaila on suunniteltu tarjoamaan pelaajalle maksimaalisen voiman ja tarkkuuden. 
+Mailan Cortex -teknologia vaimentaa tärinää ja parantaa tuntumaa, kun taas mailan 16x19-särmäyskuvio tarjoaa erinomaisen tarkkuuden ja lisää vauhtia lyönteihin. Mailan aerodynaaminen muotoilu parantaa sen nopeutta 
+ja ketteryyttä. Tämä maila on erinomainen valinta pelaajille, jotka haluavat yhdistää voiman ja tarkkuuden tehokkaasti.");
+
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Graphene 360+ Speed MP -tennismaila","4",30,NULL,"product-images/mailapelit/tennis3.png",
+"Graphene 360+ Speed MP -tennismaila on suunniteltu tarjoamaan pelaajalle nopeutta ja tarkkuutta.","Graphene 360+ Speed MP -tennismaila on suunniteltu tarjoamaan pelaajalle nopeutta ja tarkkuutta. 
+Mailan Graphene 360+ -teknologia mahdollistaa entistä paremman energiansiirron mailan ja pallon välillä, mikä lisää mailan tehokkuutta. Mailan 16x19-särmäyskuvio tarjoaa erinomaisen tarkkuuden ja mailan tasapainotettu 
+painopiste tarjoaa hyvän tuntuman ja lyöntivoiman. Tämä maila on erinomainen valinta pelaajille, jotka haluavat nopeaa ja tehokasta suorituskykyä kentällä.");
+
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Velo -pesäpallomaila","4",50,NULL,"product-images/mailapelit/pesapallo1.png",
+"Velo -pesäpallomaila on suunniteltu tarjoamaan pelaajalle erinomaista nopeutta ja tarkkuutta.","Velo -pesäpallomaila on suunniteltu tarjoamaan pelaajalle erinomaista nopeutta ja tarkkuutta. Mailan yhdistelmärakenne 
+yhdistää hiilikuidun ja komposiitin, joka mahdollistaa nopeat ja tehokkaat lyönnit. Mailan end-loaded -painopiste antaa pelaajalle lisää lyöntivoimaa ja sen tacky grip -pinnoite antaa hyvän otteen. Tämä maila on 
+erinomainen valinta pelaajille, jotka haluavat nopeaa ja tehokasta suorituskykyä kentällä.");
+
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Slugger Prime 919 -pesäpallomaila","4",40,NULL,"product-images/mailapelit/pesapallo2.png",
+"Slugger Prime 919 -pesäpallomaila on valmistettu korkealaatuisesta hiilikuidusta ja se on suunniteltu tarjoamaan pelaajalle erinomaista lyöntivoimaa ja tarkkuutta.","Slugger Prime 919 -pesäpallomaila on valmistettu 
+korkealaatuisesta hiilikuidusta ja se on suunniteltu tarjoamaan pelaajalle erinomaista lyöntivoimaa ja tarkkuutta. Mailan uusi VCX -teknologia vaimentaa tärinää ja parantaa tuntumaa, kun taas mailan end-loaded -painopiste 
+antaa pelaajalle lisää voimaa lyönteihin. Mailan LS Pro Comfort -pinnoite antaa hyvän otteen ja lisää mailan kestävyyttä. Tämä maila on erinomainen valinta pelaajille, jotka haluavat maksimoida lyöntivoimansa ja tarkkuutensa.");
+
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Ghost X -pesäpallomaila","4",60,NULL,"product-images/mailapelit/pesapallo3.png",
+"Ghost X -pesäpallomaila on valmistettu laadukkaasta hiilikuidusta ja se on suunniteltu tarjoamaan pelaajalle erinomaista lyöntivoimaa ja nopeutta.","Ghost X -pesäpallomaila on valmistettu laadukkaasta hiilikuidusta ja se on 
+suunniteltu tarjoamaan pelaajalle erinomaista lyöntivoimaa ja nopeutta. Mailan ainutlaatuinen Double Barrel -rakenne mahdollistaa tehokkaammat lyönnit ja sen end-loaded -painopiste antaa pelaajalle lisää lyöntivoimaa. 
+Mailan Hyperskin -pinnoite antaa hyvän otteen ja lisää mailan kestävyyttä. Tämä maila on erinomainen valinta pelaajille, jotka haluavat nopeaa ja tehokasta suorituskykyä kentällä.");
+
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Timo Boll ALC -pöytätennismaila","4",19.99,NULL,"product-images/mailapelit/poytatennis1.png",
+"Timo Boll ALC -pöytätennismaila on suunniteltu tarjoamaan maksimaalista nopeutta ja tarkkuutta.","Timo Boll ALC -pöytätennismaila on suunniteltu tarjoamaan maksimaalista nopeutta ja tarkkuutta. Mailan ALC -teknologia 
+vaimentaa tärinää ja parantaa tuntumaa, kun taas sen ohut teräsrakenne lisää mailan nopeutta. Mailan tasapainotettu painopiste tarjoaa hyvän tuntuman ja lyöntivoiman. Tämä maila on erinomainen valinta pelaajille, 
+jotka etsivät mailaa, joka tarjoaa tehokkuutta ja tarkkuutta.");
+
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Pro Carbon -pöytätennismaila","4",29.99,NULL,"product-images/mailapelit/poytatennis2.png",
+"Pro Carbon -pöytätennismaila on suunniteltu tarjoamaan pelaajalle maksimaalista nopeutta ja voimaa.","Pro Carbon -pöytätennismaila on suunniteltu tarjoamaan pelaajalle maksimaalista nopeutta ja voimaa. 
+Mailan Carbon Technology -teknologia tarjoaa mailalle entistä suuremman jäykkyyden ja kestävyyden, mikä lisää sen lyöntivoimaa. Mailan 7-kerroksinen rakenne parantaa sen tasapainoa ja tuntumaa. Mailan ITTF-hyväksyntä 
+tarkoittaa, että se on ammattilaispelaajien suosima maila. Tämä maila on erinomainen valinta pelaajille, jotka haluavat yhdistää voimaa ja nopeutta tehokkaasti.");
+
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Hurricane Long 5 -pöytätennismaila","4",15,NULL,"product-images/mailapelit/poytatennis3.png",
+"Hurricane Long 5 -pöytätennismaila on suunniteltu tarjoamaan pelaajalle maksimaalista tarkkuutta ja tehokkuutta.","Hurricane Long 5 -pöytätennismaila on suunniteltu tarjoamaan pelaajalle maksimaalista 
+tarkkuutta ja tehokkuutta. Mailan puinen rakenne on valmistettu korkealaatuisesta tiikkipuusta, joka tarjoaa mailalle hyvän tuntuman ja vakauden. Mailan 5-kerroksinen rakenne tarjoaa erinomaisen tarkkuuden ja 
+lyöntivoiman. Mailan huippuluokan tekniikka tekee siitä erinomaisen valinnan ammattilaispelaajille, jotka etsivät mailaa, joka tarjoaa sekä tarkkuutta että tehokkuutta.");
+
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Alpha QX Pro -jääkiekkomaila","4",49,NULL,"product-images/mailapelit/jaakiekko1.png",
+"Tämä Alpha QX Pro -jääkiekkomaila on valmistettu laadukkaasta hiilikuidusta ja se on suunniteltu tarjoamaan pelaajalle erinomaista voimaa ja tarkkuutta.","Tämä Alpha QX Pro -jääkiekkomaila on valmistettu 
+laadukkaasta hiilikuidusta ja se on suunniteltu tarjoamaan pelaajalle erinomaista voimaa ja tarkkuutta. Mailan jäykkä varsi mahdollistaa tehokkaan voimansiirron laukauksiin ja sen ainutlaatuinen geometria auttaa pelaajaa 
+hallitsemaan mailaa paremmin. Mailan Flex Grip -pinnoite antaa hyvän otteen ja lisää mailan kestävyyttä. Tämä maila on erinomainen valinta kaikille pelaajille, jotka haluavat maksimoida laukausvoimansa ja hallinnan jäällä.");
+
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Nexus 2N Pro -jääkiekkomaila","4",29,NULL,"product-images/mailapelit/jaakiekko2.png",
+"Nexus 2N Pro -jääkiekkomaila on suunniteltu tarjoamaan pelaajalle erinomaista tasapainoa, tarkkuutta ja voimaa.","Nexus 2N Pro -jääkiekkomaila on suunniteltu tarjoamaan pelaajalle erinomaista tasapainoa, tarkkuutta 
+ja voimaa. Mailan jäykkä varsi ja Pure Shot -tekniikka mahdollistavat tehokkaan voimansiirron laukauksiin ja sen uniikki geometria auttaa pelaajaa hallitsemaan mailaa paremmin. Mailan Griptac -pinnoite antaa hyvän otteen 
+ja lisää mailan kestävyyttä. Tämä maila on erinomainen valinta kaikille pelaajille, jotka haluavat erinomaisen suorituskyvyn jäällä.");
+
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Trigger 4 Pro -jääkiekkomaila","4",35,NULL,"product-images/mailapelit/jaakiekko3.png",
+"Trigger 4 Pro -jääkiekkomaila on valmistettu kevyestä hiilikuidusta ja se on suunniteltu tarjoamaan pelaajalle erinomaista tarkkuutta ja nopeutta.","Trigger 4 Pro -jääkiekkomaila on valmistettu kevyestä hiilikuidusta ja 
+se on suunniteltu tarjoamaan pelaajalle erinomaista tarkkuutta ja nopeutta. Mailan ainutlaatuinen Kick Point -teknologia mahdollistaa nopeat laukaukset ja sen uniikki Blade Speed -muotoilu auttaa pelaajaa hallitsemaan mailaa paremmin. 
+Mailan Ascent Blade -rakenne antaa paremman tuntuman kiekkoon ja sen C6 -teknologia vaimentaa tärähdyksiä. Tämä maila on erinomainen valinta pelaajille, jotka haluavat nopeaa ja tarkkaa suorituskykyä jäällä.");
 
 
 /* PYÖRÄILY */
-insert into Category (categoryname) values ("pyöraily");
 
-insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("maastopyörä","5",359.99,NULL,"product-images/pyoraily/maastopyora1.png","Hieno vihreä pyörä");
-insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("maastopyörä","5",459.99,NULL,"product-images/pyoraily/maastopyora2.png","Tällä pyörällä pääset lujjaa mehtässäkin!");
-insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("maastopyörä","5",559.99,NULL,"product-images/pyoraily/maastopyora3.png","Pro-pyörä");
-insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("kilpapyörä","5",300,NULL,"product-images/pyoraily/maantiepyora1.png","Tällä pyörällä voit osallistua Tour de Franceen");
-insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("kilpapyörä","5",300,NULL,"product-images/pyoraily/maantiepyora2.png","Harrastelijalle hyvä pyörä");
-insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("kilpapyörä","5",300,NULL,"product-images/pyoraily/maantiepyora3.png","Louis Armstrongin nimikkopyörä");
-insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("naistenpyörä","5",200,NULL,"product-images/pyoraily/naistenpyora1.png","Hieno punainen pyörä");
-insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("naistenpyörä","5",220,NULL,"product-images/pyoraily/naistenpyora2.png","Tästä vihreä retropyörä");
-insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("naistenpyörä","5",250,NULL,"product-images/pyoraily/naistenpyora3.png","Söpön värinen pyörä");
-insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("pyöräilykypärä","5",30,NULL,"product-images/pyoraily/pyorailykypara1.png","Miesten kypärä");
-insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("pyöräilykypärä","5",30,NULL,"product-images/pyoraily/pyorailykypara2.png","Naisten kypärä");
-insert into Product (productname,categoryid,price,sale,imgURL,descript) values ("pyöräilykypärä","5",20,NULL,"product-images/pyoraily/pyorailykypara3.png","Lasten kypärä");
+/* ADDING THE CATEGORY*/
+insert into Category (categoryname) values ("Pyöraily");
+
+/*ADDING CONTENT TO PRODUCT*/
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Tallboy -maastopyörä","5",359.99,NULL,"product-images/pyoraily/maastopyora1.png",
+"Tallboy on huippuluokan maastopyörä, joka on suunniteltu vaativiin maastoihin ja seikkailuihin.","Tallboy on huippuluokan maastopyörä, joka on suunniteltu vaativiin maastoihin ja seikkailuihin. Pyörässä on hiilikuiturunko ja -haarukka, 
+jotka tarjoavat erinomaisen keveyden ja kestävyyden. Sen Shimano XT -vaihteisto mahdollistaa nopean ja tarkan vaihtamisen, ja sen hydrauliset levyjarrut tarjoavat tehokkaan jarrutuksen kaikissa olosuhteissa. Tallboy -pyörän geometria on 
+suunniteltu erittäin vakaa ja kontrolloitavaksi, ja sen jousitusjärjestelmä tarjoaa erinomaisen suorituskyvyn epätasaisella maastolla. Tämä on erinomainen valinta henkilöille, jotka haluavat huippuluokan maastopyörän, joka tarjoaa 
+erinomaisen suorituskyvyn vaativissa olosuhteissa.");
+
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Fuel EX 9.8 -maastopyörä","5",459.99,NULL,"product-images/pyoraily/maastopyora2.png",
+"Fuel EX 9.8 on kestävä ja luotettava maastopyörä, joka sopii erinomaisesti vaativiin maastoihin ja seikkailuihin.","Fuel EX 9.8 on kestävä ja luotettava maastopyörä, joka sopii erinomaisesti vaativiin maastoihin ja seikkailuihin. 
+Sen hiilikuiturunko tarjoaa erinomaisen keveyden ja kestävyyden, ja sen Shimano XT -vaihteisto mahdollistaa nopean ja tarkan vaihtamisen. Pyörässä on myös hydrauliset levyjarrut, jotka tarjoavat erinomaisen jarrutuksen kaikissa olosuhteissa. 
+Fuel EX 9.8 -pyörän jousitusjärjestelmä on suunniteltu erityisesti epätasaisille maastoille, mikä tekee ajamisesta erittäin mukavaa. Tämä on erinomainen valinta henkilöille, jotka haluavat kestävän ja mukavan maastopyörän.");
+
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Advanced Pro 29 -maastopyörä","5",559.99,NULL,"product-images/pyoraily/maastopyora3.png",
+"Advanced Pro 29 on huippuluokan maastopyörä, joka on suunniteltu vaativiin maastoihin ja seikkailuihin.","Advanced Pro 29 on huippuluokan maastopyörä, joka on suunniteltu vaativiin maastoihin ja seikkailuihin. Sen hiilikuiturunko ja 
+-haarukka tarjoavat erinomaisen keveyden ja kestävyyden, ja sen Shimano XT -vaihteisto mahdollistaa nopean ja tarkan vaihtamisen. Pyörässä on myös hydrauliset levyjarrut, jotka tarjoavat erinomaisen jarrutuksen kaikissa olosuhteissa. 
+Advanced Pro 29 -pyörän jousitusjärjestelmä on suunniteltu erittäin tehokkaaksi ja se tarjoaa erinomaisen suorituskyvyn epätasaisilla maastoilla. Tämä on erinomainen valinta henkilöille, jotka haluavat huippuluokan maastopyörän.");
+
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Domane SL6 -maantiepyörä","5",300,NULL,"product-images/pyoraily/maantiepyora1.png",
+"Domane SL6 on huippuluokan maantiepyörä, joka on suunniteltu pitkille matkoille ja kilpailuihin.","Domane SL6 on huippuluokan maantiepyörä, joka on suunniteltu pitkille matkoille ja kilpailuihin. Pyörässä on hiilikuiturunko ja 
+-haarukka, jotka tarjoavat erinomaisen kestävyyden ja suorituskyvyn. Sen Shimano Ultegra -vaihteisto mahdollistaa tarkan ja nopean vaihtamisen, ja sen hydrauliset levyjarrut tarjoavat tehokkaan jarrutuksen kaikissa olosuhteissa. 
+Domane SL6 -pyörän keula on myös vaimennettu, mikä tekee ajamisesta erittäin mukavaa pitkillä matkoilla. Tämä on erinomainen valinta ammattimaisille kilpailijoille ja harrastajille, jotka haluavat huippuluokan maantiepyörän.");
+
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Synapse Carbon Disc 105 -maantiepyörä","5",300,NULL,"product-images/pyoraily/maantiepyora2.png",
+"Synapse Carbon Disc 105 on kestävä ja luotettava maantiepyörä, joka sopii hyvin pitkille matkoille ja kuntokilpailuihin.","Synapse Carbon Disc 105 on kestävä ja luotettava maantiepyörä, joka sopii hyvin pitkille matkoille ja 
+kuntokilpailuihin. Sen hiilikuiturunko tarjoaa erinomaisen keveyden ja kestävyyden, ja sen Shimano 105 -vaihteisto mahdollistaa tarkan ja nopean vaihtamisen. Pyörässä on myös hydrauliset levyjarrut, jotka tarjoavat erinomaisen 
+jarrutuksen kaikissa olosuhteissa. Synapse Carbon Disc 105 -pyörän geometria on suunniteltu erittäin mukavaksi pitkillä matkoilla, ja sen satula on erityisesti suunniteltu vähentämään painetta herkille alueille. Tämä on erinomainen 
+valinta henkilöille, jotka haluavat kestävän ja mukavan maantiepyörän.");
+
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Roubaix Expert -maantiepyörä","5",300,NULL,"product-images/pyoraily/maantiepyora3.png",
+"Roubaix Expert on huippuluokan maantiepyörä, joka on suunniteltu vaativaan kilpailukäyttöön.","Roubaix Expert on huippuluokan maantiepyörä, joka on suunniteltu vaativaan kilpailukäyttöön. Sen hiilikuiturunko ja -haarukka tarjoavat 
+erinomaisen kestävyyden ja suorituskyvyn, ja sen Shimano Ultegra -vaihteisto mahdollistaa nopean ja tarkan vaihtamisen. Pyörässä on myös hydrauliset levyjarrut, jotka tarjoavat tehokkaan jarrutuksen kaikissa olosuhteissa. Roubaix Expert 
+-pyörän Future Shock -teknologia vaimentaa tärinää tehokkaasti, mikä tekee ajamisesta erittäin mukavaa pitkillä matkoilla. Tämä on erinomainen valinta henkilöille, jotka haluavat huippuluokan maantiepyörän.");
+
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Alight 3 -naistenpyörä","5",200,NULL,"product-images/pyoraily/naistenpyora1.png",
+"Alight 3 on kevyt ja tyylikäs naistenpyörä, joka sopii erinomaisesti arkiajoon ja kuntoiluun.","Alight 3 on kevyt ja tyylikäs naistenpyörä, joka sopii erinomaisesti arkiajoon ja kuntoiluun. Sen kevyt alumiinirunko ja -haarukka tekevät 
+ajamisesta mukavaa ja vaivatonta, ja sen Shimano Altus -vaihteisto mahdollistaa nopean ja tarkan vaihtamisen. Alight 3 -pyörän geometria on suunniteltu erityisesti naisille, mikä tekee ajamisesta ergonomisempaa ja mukavampaa. Tämä on 
+erinomainen valinta henkilöille, jotka haluavat tyylikkään ja kevyen pyörän, joka tarjoaa mukavan ajokokemuksen.");
+
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Verve 2 Disc -naistenpyörä","5",220,NULL,"product-images/pyoraily/naistenpyora2.png",
+"Verve 2 Disc on monipuolinen naistenpyörä, joka sopii erinomaisesti kaupunki- ja kuntopyöräilyyn.","Verve 2 Disc on monipuolinen naistenpyörä, joka sopii erinomaisesti kaupunki- ja kuntopyöräilyyn. Sen kevyt alumiinirunko ja -haarukka 
+tekevät ajamisesta vaivatonta, ja sen Shimano Altus -vaihteisto mahdollistaa nopean ja tarkan vaihtamisen. Pyörässä on myös hydrauliset levyjarrut, jotka tarjoavat erinomaisen jarrutuksen kaikissa olosuhteissa. Verve 2 Disc -pyörän 
+ergonominen geometria tekee ajamisesta mukavaa ja helpompaa, ja sen istuin on erityisesti suunniteltu naisten anatomiaa ajatellen. Tämä on erinomainen valinta henkilöille, jotka haluavat monipuolisen ja mukavan pyörän kaupunki- ja kuntopyöräilyyn.");
+
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Dolce Elite -naistenpyörä","5",250,NULL,"product-images/pyoraily/naistenpyora3.png",
+"Dolce Elite on laadukas naistenpyörä, joka sopii erinomaisesti pidemmille retkille ja kuntoiluun.","Dolce Elite on laadukas naistenpyörä, joka sopii erinomaisesti pidemmille retkille ja kuntoiluun. Sen kevyt alumiinirunko ja -haarukka 
+tekevät ajamisesta mukavaa ja vaivatonta, ja sen Shimano 105 -vaihteisto mahdollistaa nopean ja tarkan vaihtamisen. Pyörässä on myös hydrauliset levyjarrut, jotka tarjoavat erinomaisen jarrutuksen kaikissa olosuhteissa. Dolce Elite -pyörän 
+ergonominen geometria tekee ajamisesta mukavaa ja tehokasta, ja sen istuin on erityisesti suunniteltu naisten anatomiaa ajatellen. Tämä on erinomainen valinta henkilöille, jotka haluavat laadukkaan ja mukavan pyörän pidemmille retkille ja kuntoiluun.");
+
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Syntax MIPS -pyöräilykypärä","5",30,NULL,"product-images/pyoraily/pyorailykypara1.png",
+"Syntax MIPS on kevyt ja ilmava pyöräilykypärä, joka tarjoaa erinomaisen suojan kaikissa olosuhteissa.","Syntax MIPS on kevyt ja ilmava pyöräilykypärä, joka tarjoaa erinomaisen suojan kaikissa olosuhteissa. Kypärässä on MIPS-teknologia, 
+joka suojaa aivoja pyöräilytapaturmissa, sekä hyvä ilmanvaihtojärjestelmä, joka pitää pään viileänä kuumalla säällä. Syntax MIPS -kypärässä on myös helppokäyttöinen säätöjärjestelmä, jonka avulla voit säätää kypärän istuvuutta nopeasti ja helposti. 
+Tämä on erinomainen valinta pyöräilijöille, jotka haluavat kevyen ja suojaisan kypärän.");
+
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Falcon MIPS -pyöräilykypärä","5",30,NULL,"product-images/pyoraily/pyorailykypara2.png",
+"Falcon MIPS on laadukas pyöräilykypärä, joka sopii erinomaisesti maantie- ja maastopyöräilyyn.","Falcon MIPS on laadukas pyöräilykypärä, joka sopii erinomaisesti maantie- ja maastopyöräilyyn. Kypärässä on MIPS-teknologia, joka suojaa aivoja 
+pyöräilytapaturmissa, sekä hyvä ilmanvaihtojärjestelmä, joka pitää pään viileänä kuumalla säällä. Falcon MIPS -kypärässä on myös säädettävä visiiri, joka suojaa silmiä auringolta ja pölyltä, sekä helppokäyttöinen säätöjärjestelmä, jonka avulla voit 
+säätää kypärän istuvuutta nopeasti ja helposti. Tämä on erinomainen valinta pyöräilijöille, jotka haluavat laadukkaan ja monipuolisen kypärän.");
+
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("GameChanger -pyöräilykypärä","5",20,NULL,"product-images/pyoraily/pyorailykypara3.png",
+"GameChanger on innovatiivinen ja aerodynaaminen pyöräilykypärä, joka sopii erinomaisesti maantiepyöräilyyn.","GameChanger on innovatiivinen ja aerodynaaminen pyöräilykypärä, joka sopii erinomaisesti maantiepyöräilyyn. Kypärässä on ilmavirtaa 
+optimoiva muotoilu, joka vähentää ilmanvastusta ja tekee ajamisesta helpompaa ja tehokkaampaa. GameChanger -kypärässä on myös MIPS-teknologia, joka suojaa aivoja pyöräilytapaturmissa, sekä hyvä ilmanvaihtojärjestelmä, joka pitää pään viileänä kuumalla 
+säällä. Kypärässä on myös helppokäyttöinen säätöjärjestelmä, jonka avulla voit säätää kypärän istuvuutta nopeasti ja helposti. Tämä on erinomainen valinta pyöräilijöille, jotka haluavat innovatiivisen ja aerodynaamisen kypärän.");
 
 
 /* ASIAKAS*/
