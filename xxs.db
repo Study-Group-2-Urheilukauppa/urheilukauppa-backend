@@ -82,7 +82,7 @@ CREATE TABLE AdminLogin (
 username CHAR(30) NOT NULL,
 pw CHAR(60) NOT NULL
 /* FEEDBACK */
-
+);
 CREATE TABLE Feedback (
     id INT NOT NULL AUTO_INCREMENT,
     name VARCHAR(200) NOT NULL,
