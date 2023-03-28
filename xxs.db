@@ -81,6 +81,14 @@ FOREIGN KEY (productid)
 CREATE TABLE AdminLogin (
 username CHAR(30) NOT NULL,
 pw CHAR(60) NOT NULL
+/* FEEDBACK */
+
+CREATE TABLE Feedback (
+    id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(200) NOT NULL,
+    email VARCHAR(50) NOT NULL,
+    text VARCHAR(255) NOT NULL,
+    PRIMARY KEY (id)
 );
 
 /* TALVIURHEILU */
@@ -371,7 +379,7 @@ Mailan Ascent Blade -rakenne antaa paremman tuntuman kiekkoon ja sen C6 -teknolo
 /* PYÖRÄILY */
 
 /* ADDING THE CATEGORY*/
-insert into Category (categoryname) values ("Pyöraily");
+insert into Category (categoryname) values ("Pyöräily");
 
 /*ADDING CONTENT TO PRODUCT*/
 insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Tallboy -maastopyörä","5",359.99,NULL,"product-images/pyoraily/maastopyora1.png",
