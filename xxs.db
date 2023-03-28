@@ -78,6 +78,11 @@ FOREIGN KEY (productid)
     REFERENCES Product (productid)
 );
 
+CREATE TABLE AdminLogin (
+username CHAR(30) NOT NULL,
+pw CHAR(60) NOT NULL
+);
+
 /* TALVIURHEILU */
 
 /* ADDING THE CATEGORY*/
