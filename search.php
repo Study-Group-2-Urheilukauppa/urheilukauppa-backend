@@ -9,7 +9,7 @@ try{
 $dbcon = openDB();
 
 // Prepare the SQL query
-$sql = "SELECT * FROM product WHERE productname LIKE :searchTerm";
+$sql = "SELECT * FROM Product WHERE productname LIKE :searchTerm";
 
 // Bind the search term to the query
 $statement = $dbcon->prepare($sql);
