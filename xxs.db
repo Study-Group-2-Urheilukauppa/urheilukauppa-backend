@@ -77,14 +77,15 @@ PRIMARY KEY (ordernum, rownum),
 FOREIGN KEY (productid)
     REFERENCES Product (productid)
 );
-
+/*AdminLogin*/
 CREATE TABLE AdminLogin (
-  id INT NOT NULL AUTO_INCREMENT,
-  username CHAR(30) NOT NULL,
-  pw CHAR(60) NOT NULL,
-  PRIMARY KEY (id)
-/* FEEDBACK */
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  username VARCHAR(255) UNIQUE NOT NULL,
+  password_hash CHAR(60) NOT NULL,
+  salt CHAR(16) NOT NULL
 );
+/* FEEDBACK */
+
 CREATE TABLE Feedback (
     id INT NOT NULL AUTO_INCREMENT,
     name VARCHAR(200) NOT NULL,
