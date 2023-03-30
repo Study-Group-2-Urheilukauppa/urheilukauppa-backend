@@ -79,8 +79,10 @@ FOREIGN KEY (productid)
 );
 
 CREATE TABLE AdminLogin (
-username CHAR(30) NOT NULL,
-pw CHAR(60) NOT NULL
+  id INT NOT NULL AUTO_INCREMENT,
+  username CHAR(30) NOT NULL,
+  pw CHAR(60) NOT NULL,
+  PRIMARY KEY (id)
 /* FEEDBACK */
 );
 CREATE TABLE Feedback (
