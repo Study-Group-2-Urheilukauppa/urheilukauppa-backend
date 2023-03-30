@@ -99,7 +99,7 @@ insert into Category (categoryname) values ("Talviurheilu");
 
 /*ADDING CONTENT TO PRODUCT*/
 
-insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("XDR 80 TI -laskettelusukset","1",120,NULL,"product-images/talviurheilu/sukset1.png",
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("XDR 80 TI -laskettelusukset","1",120,30,"product-images/talviurheilu/sukset1.png",
 "XDR 80 TI -laskettelusukset ovat suunniteltu tarjoamaan erinomaisen suorituskyvyn rinteissä kaikentasoisille laskettelijoille.","XDR 80 TI -laskettelusukset ovat suunniteltu tarjoamaan 
 erinomaisen suorituskyvyn rinteissä kaikentasoisille laskettelijoille. Sukset ovat kevyet, kestävät ja vakaat, mikä tekee niistä helpon hallita kaikenlaisissa olosuhteissa. Niiden All-Terrain Rocker 
 -profiili antaa pehmeän ajon lumen päällä ja hyvän pidon kovemmalla alustalla. Näiden sukset tarjoavat erinomaista hallintaa ja vakautta kaikissa laskuissa.");
@@ -152,7 +152,7 @@ insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescr
 valinta aloitteleville taitoluistelijoille, jotka etsivät tasapainoa mukavuuden ja suorituskyvyn välillä. Näiden luistimien terä on valmistettu teräksestä, mikä tarjoaa hyvän kestävyyden ja pidon 
 jään pinnalla. Sisävuori on pehmeä ja mukava, mutta samalla tarjoaa tarpeeksi tukea ja vakautta. Näiden taitoluistimien ulkoasu on myös tyylikäs ja moderni.");
 
-insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Chorus -taitoluistimet","1",111,NULL,"product-images/talviurheilu/taitoluistimet2.png",
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Chorus -taitoluistimet","1",111,20,"product-images/talviurheilu/taitoluistimet2.png",
 "Chorus -taitoluistimet ovat loistava valinta edistyneille taitoluistelijoille, jotka haluavat parasta suorituskykyä ja tyyliä.","Chorus -taitoluistimet ovat loistava valinta edistyneille 
 taitoluistelijoille, jotka haluavat parasta suorituskykyä ja tyyliä. Näiden luistimien terä on valmistettu hiiliteräksestä, mikä tekee siitä kevyen ja kestävän. Sisävuori on erittäin mukava ja pehmeä, 
 mutta samalla tarjoaa erinomaisen tuen ja vakauden kaikissa liikkeissä. Näiden taitoluistimien ulkoasu on myös erittäin tyylikäs ja huomiota herättävä.");
@@ -182,7 +182,7 @@ käsipainot, jotka sopivat erinomaisesti niin kotitreeneihin kuin kuntosalilleki
 Käsipainojen paino on merkitty selvästi niiden kylkeen, joten niiden käyttö on helppoa ja vaivatonta. Gorilla Sports Käsipainot ovat saatavilla eri painoisina, joten voit valita juuri sopivan 
 painoisen käsipainon omaan treeniisi. Tämä on erinomainen valinta kaikille, jotka haluavat laadukkaan ja kestävän käsipainon.");
 
-insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Fitness Käsipainot","2",70,NULL,"product-images/kuntoilu/kasipaino3.png",
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Fitness Käsipainot","2",70,40,"product-images/kuntoilu/kasipaino3.png",
 "Fitness Käsipainot ovat erittäin kestävät ja laadukkaat käsipainot, jotka sopivat erinomaisesti monenlaisiin treeneihin.","Fitness Käsipainot ovat erittäin kestävät ja laadukkaat käsipainot, 
 jotka sopivat erinomaisesti monenlaisiin treeneihin. Käsipainojen ergonominen muotoilu takaa hyvän otteen ja niiden naarmuton pinta takaa paremman pidon treenatessa. Käsipainojen paino on 
 merkitty selvästi niiden kylkeen, joten niiden käyttö on helppoa ja vaivatonta. Fitness Käsipainot ovat saatavilla eri painoisina, joten voit valita juuri sopivan painoisen käsipainon omaan 
@@ -212,7 +212,7 @@ harjoittelukokemuksen. Sen 22-tuumainen HD-kosketusnäyttö näyttää upeita vi
 laitteeseen sopivan istuimen ja ohjaustangon korkeuden ja kulman, jotta harjoittelu olisi mahdollisimman mukavaa. Pyörän magneettivastus tarjoaa 24 erilaista vastusohjelmaa ja sen kehittynyt 
 äänijärjestelmä mahdollistaa musiikin tai ohjauksen kuuntelemisen Bluetooth-yhteyden kautta. Tämä on erinomainen valinta henkilöille, jotka haluavat tehokkaan ja monipuolisen kuntopyörän kotitreeneihin.");
 
-insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("IC4 -kuntopyörä","2",250,NULL,"product-images/kuntoilu/kuntopyora2.png",
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("IC4 -kuntopyörä","2",250,30,"product-images/kuntoilu/kuntopyora2.png",
 "IC4 -kuntopyörä on kestävä ja monipuolinen kuntopyörä, joka on suunniteltu vaativaan treenaamiseen.","IC4 -kuntopyörä on kestävä ja monipuolinen kuntopyörä, joka on suunniteltu vaativaan treenaamiseen. 
 Sen magneettivastus tarjoaa 100 eri vastusohjelmaa ja sen LCD-näyttö seuraa harjoittelun edistymistä. Käyttäjä voi säätää pyörän istuimen ja ohjaustangon korkeuden ja kulman sopivaksi omaan treeniinsä. 
 IC4 -kuntopyörässä on myös monipuoliset harjoitteluohjelmat, kuten sykemittari, intervalliharjoittelut ja FTP-testausohjelma. Tämä on erinomainen valinta henkilöille, jotka haluavat monipuolisen 
@@ -257,7 +257,7 @@ kokeneille vesisukeltajille, jotka etsivät huippuluokan suorituskykyä ja kest�
 joka tarjoaa vakauden ja suorituskyvyn vedessä. Säädettävän sitomistoiminnon ansiosta nämä vesisukset sopivat eri jalkakokoille. Nämä vesisukset ovat loistava valinta kaikille, 
 jotka haluavat kokeilla uusia temppuja ja taitoja vedessä.");
 
-insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Allegre Combo Vesisukset","3",250,NULL,"product-images/vesiurheilu/vesisukset3.png",
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Allegre Combo Vesisukset","3",250,50,"product-images/vesiurheilu/vesisukset3.png",
 "Allegre Combo Vesisukset ovat loistava valinta kaikenlaisille vesisukeltajille.","Allegre Combo Vesisukset ovat loistava valinta kaikenlaisille vesisukeltajille. Nämä vesisukset on 
 valmistettu korkealaatuisesta materiaalista ja niissä on säädettävä sitomistoiminto, joka sopii eri jalkakokoille. Vesisukset ovat helppo käyttää ja niiden muotoilu on suunniteltu 
 aloittelijaystävälliseksi. Vesisukset tarjoavat vakauden ja suorituskyvyn vedessä, joten ne sopivat hyvin temppujen harjoitteluun ja vauhdikkaaseen laskuun. Nämä vesisukset ovat 
@@ -298,7 +298,7 @@ insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescr
 sopii erinomaisesti perheen yhteisille retkille ja hauskanpitoon vedessä. Lauta on valmistettu korkealaatuisesta materiaalista, joka kestää kulutusta ja tarjoaa hyvän vakauden vedessä. Lauta on myös helppo 
 kuljettaa mukana, sillä se on kevyt ja voidaan taittaa kokoon.");
 
-insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("All Star 12'6 -SUP-lauta","3",149.99,NULL,"product-images/vesiurheilu/sup2.png",
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("All Star 12'6 -SUP-lauta","3",149.99,20,"product-images/vesiurheilu/sup2.png",
 "All Star 12'6 -SUP-lauta on kilpailukäyttöön suunniteltu huippuluokan lautamalli.","All Star 12'6 -SUP-lauta on kilpailukäyttöön suunniteltu huippuluokan lautamalli. Tämä erittäin kevyt ja nopea lautamalli 
 tarjoaa erinomaisen suorituskyvyn ja on suosittu valinta ammattilaislautailijoille ympäri maailman. Lauta on valmistettu kestävästä materiaalista, joka kestää kulutusta ja tarjoaa erinomaisen vakauden vedessä. 
 Lautaa on myös helppo kuljettaa mukana, sillä se voidaan taittaa kokoon.");
@@ -325,7 +325,7 @@ insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescr
 Mailan Cortex -teknologia vaimentaa tärinää ja parantaa tuntumaa, kun taas mailan 16x19-särmäyskuvio tarjoaa erinomaisen tarkkuuden ja lisää vauhtia lyönteihin. Mailan aerodynaaminen muotoilu parantaa sen nopeutta 
 ja ketteryyttä. Tämä maila on erinomainen valinta pelaajille, jotka haluavat yhdistää voiman ja tarkkuuden tehokkaasti.");
 
-insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Graphene 360+ Speed MP -tennismaila","4",30,NULL,"product-images/mailapelit/tennis3.png",
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Graphene 360+ Speed MP -tennismaila","4",30,25,"product-images/mailapelit/tennis3.png",
 "Graphene 360+ Speed MP -tennismaila on suunniteltu tarjoamaan pelaajalle nopeutta ja tarkkuutta.","Graphene 360+ Speed MP -tennismaila on suunniteltu tarjoamaan pelaajalle nopeutta ja tarkkuutta. 
 Mailan Graphene 360+ -teknologia mahdollistaa entistä paremman energiansiirron mailan ja pallon välillä, mikä lisää mailan tehokkuutta. Mailan 16x19-särmäyskuvio tarjoaa erinomaisen tarkkuuden ja mailan tasapainotettu 
 painopiste tarjoaa hyvän tuntuman ja lyöntivoiman. Tämä maila on erinomainen valinta pelaajille, jotka haluavat nopeaa ja tehokasta suorituskykyä kentällä.");
@@ -350,7 +350,7 @@ insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescr
 vaimentaa tärinää ja parantaa tuntumaa, kun taas sen ohut teräsrakenne lisää mailan nopeutta. Mailan tasapainotettu painopiste tarjoaa hyvän tuntuman ja lyöntivoiman. Tämä maila on erinomainen valinta pelaajille, 
 jotka etsivät mailaa, joka tarjoaa tehokkuutta ja tarkkuutta.");
 
-insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Pro Carbon -pöytätennismaila","4",29.99,NULL,"product-images/mailapelit/poytatennis2.png",
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Pro Carbon -pöytätennismaila","4",29.99,40,"product-images/mailapelit/poytatennis2.png",
 "Pro Carbon -pöytätennismaila on suunniteltu tarjoamaan pelaajalle maksimaalista nopeutta ja voimaa.","Pro Carbon -pöytätennismaila on suunniteltu tarjoamaan pelaajalle maksimaalista nopeutta ja voimaa. 
 Mailan Carbon Technology -teknologia tarjoaa mailalle entistä suuremman jäykkyyden ja kestävyyden, mikä lisää sen lyöntivoimaa. Mailan 7-kerroksinen rakenne parantaa sen tasapainoa ja tuntumaa. Mailan ITTF-hyväksyntä 
 tarkoittaa, että se on ammattilaispelaajien suosima maila. Tämä maila on erinomainen valinta pelaajille, jotka haluavat yhdistää voimaa ja nopeutta tehokkaasti.");
@@ -370,7 +370,7 @@ insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescr
 ja voimaa. Mailan jäykkä varsi ja Pure Shot -tekniikka mahdollistavat tehokkaan voimansiirron laukauksiin ja sen uniikki geometria auttaa pelaajaa hallitsemaan mailaa paremmin. Mailan Griptac -pinnoite antaa hyvän otteen 
 ja lisää mailan kestävyyttä. Tämä maila on erinomainen valinta kaikille pelaajille, jotka haluavat erinomaisen suorituskyvyn jäällä.");
 
-insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Trigger 4 Pro -jääkiekkomaila","4",35,NULL,"product-images/mailapelit/jaakiekko3.png",
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Trigger 4 Pro -jääkiekkomaila","4",35,70,"product-images/mailapelit/jaakiekko3.png",
 "Trigger 4 Pro -jääkiekkomaila on valmistettu kevyestä hiilikuidusta ja se on suunniteltu tarjoamaan pelaajalle erinomaista tarkkuutta ja nopeutta.","Trigger 4 Pro -jääkiekkomaila on valmistettu kevyestä hiilikuidusta ja 
 se on suunniteltu tarjoamaan pelaajalle erinomaista tarkkuutta ja nopeutta. Mailan ainutlaatuinen Kick Point -teknologia mahdollistaa nopeat laukaukset ja sen uniikki Blade Speed -muotoilu auttaa pelaajaa hallitsemaan mailaa paremmin. 
 Mailan Ascent Blade -rakenne antaa paremman tuntuman kiekkoon ja sen C6 -teknologia vaimentaa tärähdyksiä. Tämä maila on erinomainen valinta pelaajille, jotka haluavat nopeaa ja tarkkaa suorituskykyä jäällä.");
@@ -388,7 +388,7 @@ jotka tarjoavat erinomaisen keveyden ja kestävyyden. Sen Shimano XT -vaihteisto
 suunniteltu erittäin vakaa ja kontrolloitavaksi, ja sen jousitusjärjestelmä tarjoaa erinomaisen suorituskyvyn epätasaisella maastolla. Tämä on erinomainen valinta henkilöille, jotka haluavat huippuluokan maastopyörän, joka tarjoaa 
 erinomaisen suorituskyvyn vaativissa olosuhteissa.");
 
-insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Fuel EX 9.8 -maastopyörä","5",459.99,NULL,"product-images/pyoraily/maastopyora2.png",
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Fuel EX 9.8 -maastopyörä","5",459.99,20,"product-images/pyoraily/maastopyora2.png",
 "Fuel EX 9.8 on kestävä ja luotettava maastopyörä, joka sopii erinomaisesti vaativiin maastoihin ja seikkailuihin.","Fuel EX 9.8 on kestävä ja luotettava maastopyörä, joka sopii erinomaisesti vaativiin maastoihin ja seikkailuihin. 
 Sen hiilikuiturunko tarjoaa erinomaisen keveyden ja kestävyyden, ja sen Shimano XT -vaihteisto mahdollistaa nopean ja tarkan vaihtamisen. Pyörässä on myös hydrauliset levyjarrut, jotka tarjoavat erinomaisen jarrutuksen kaikissa olosuhteissa. 
 Fuel EX 9.8 -pyörän jousitusjärjestelmä on suunniteltu erityisesti epätasaisille maastoille, mikä tekee ajamisesta erittäin mukavaa. Tämä on erinomainen valinta henkilöille, jotka haluavat kestävän ja mukavan maastopyörän.");
@@ -424,7 +424,7 @@ insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescr
 tekevät ajamisesta vaivatonta, ja sen Shimano Altus -vaihteisto mahdollistaa nopean ja tarkan vaihtamisen. Pyörässä on myös hydrauliset levyjarrut, jotka tarjoavat erinomaisen jarrutuksen kaikissa olosuhteissa. Verve 2 Disc -pyörän 
 ergonominen geometria tekee ajamisesta mukavaa ja helpompaa, ja sen istuin on erityisesti suunniteltu naisten anatomiaa ajatellen. Tämä on erinomainen valinta henkilöille, jotka haluavat monipuolisen ja mukavan pyörän kaupunki- ja kuntopyöräilyyn.");
 
-insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Dolce Elite -naistenpyörä","5",250,NULL,"product-images/pyoraily/naistenpyora3.png",
+insert into Product (productname,categoryid,price,sale,imgURL,descript,fulldescript) values ("Dolce Elite -naistenpyörä","5",250,20,"product-images/pyoraily/naistenpyora3.png",
 "Dolce Elite on laadukas naistenpyörä, joka sopii erinomaisesti pidemmille retkille ja kuntoiluun.","Dolce Elite on laadukas naistenpyörä, joka sopii erinomaisesti pidemmille retkille ja kuntoiluun. Sen kevyt alumiinirunko ja -haarukka 
 tekevät ajamisesta mukavaa ja vaivatonta, ja sen Shimano 105 -vaihteisto mahdollistaa nopean ja tarkan vaihtamisen. Pyörässä on myös hydrauliset levyjarrut, jotka tarjoavat erinomaisen jarrutuksen kaikissa olosuhteissa. Dolce Elite -pyörän 
 ergonominen geometria tekee ajamisesta mukavaa ja tehokasta, ja sen istuin on erityisesti suunniteltu naisten anatomiaa ajatellen. Tämä on erinomainen valinta henkilöille, jotka haluavat laadukkaan ja mukavan pyörän pidemmille retkille ja kuntoiluun.");
