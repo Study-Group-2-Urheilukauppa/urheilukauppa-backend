@@ -13,7 +13,6 @@ if (!isset($data->name) || !isset($data->email) || !isset($data->feedback)) {
   exit;
 }
 
-// Sanitize the form data
 $name = filter_var($data->name, FILTER_SANITIZE_STRING);
 $email = filter_var($data->email, FILTER_SANITIZE_EMAIL);
 $text = filter_var($data->feedback, FILTER_SANITIZE_STRING);
@@ -23,15 +22,11 @@ try {
 
   // Prepare the SQL query to insert the feedback data into the database
   $sql = "INSERT INTO Feedback (name, email, text) VALUES ('$name', '$email', '$text')";
-
-  // Execute the SQL query and get the ID of the inserted row
   $id = executeInsert($db, $sql);
 
-  // Send a success response back to the frontend
   header('Content-Type: application/json');
   echo json_encode(['success' => true, 'id' => $id]);
 
 } catch (PDOException $pdoex) {
-  // If there was an error inserting the data, return an error response
   returnError($pdoex);
 }
