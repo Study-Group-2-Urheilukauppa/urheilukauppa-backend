@@ -1,49 +1,45 @@
 <?php
 require_once './inc/functions.php';
 require_once './inc/headers.php'; 
-$data = json_decode(file_get_contents("php://input"));
+
+// Check if the request method is POST
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+    // Get the username and password from the request body
+    $data = json_decode(file_get_contents("php://input"));
     $username = htmlspecialchars($data->username);
-    $password = htmlspecialchars(password_hash($data->password, PASSWORD_DEFAULT));
-    
-$dbcon = openDB();
-try {
-    $dbcon;
-} catch (PDOException $pdoex) {
-    returnError($pdoex);
-}
+    $password = htmlspecialchars($data->password);
 
-// Prepare and execute the SQL statement to retrieve user credentials
-$stmt = $dbcon->prepare("SELECT * FROM Login WHERE username=:username LIMIT 1");
-$stmt->bindValue(':username', $username, PDO::PARAM_STR);
-$stmt->execute();
-$user = $stmt->fetch(PDO::FETCH_ASSOC);
+    // TODO: Validate the username and password here
 
-// Check if a user was found with the provided username
-if ($user !== false) {
-    // Verify the password using the PHP password_verify function
-    if (password_verify($password, $user['password'])) {
-        // Return a success response
-        $response = [
-            'success' => true
-        ];
+    // For demonstration purposes, assume the login is successful if the username is "admin" and the password is "password"
+    if ($username == 'asd' && $password == '123') {
+
+        // Return a JSON response indicating success
+        $response = array(
+            'success' => true,
+            'message' => 'Login successful'
+        );
+        echo json_encode($response);
+
     } else {
-        // Return an error response
-        $response = [
+
+        // Return a JSON response indicating failure
+        $response = array(
             'success' => false,
-            'message' => 'Invalid password'
-        ];
+            'message' => 'Invalid username or password'
+        );
+        echo json_encode($response);
+
     }
+
 } else {
-    // Return an error response
-    $response = [
+
+    // Return a JSON response indicating failure
+    $response = array(
         'success' => false,
-        'message' => 'Invalid username'
-    ];
+        'message' => 'Invalid request method'
+    );
+    echo json_encode($response);
+
 }
-
-// Close the database connection
-$conn = null;
-
-// Return the response as JSON
-header('Content-Type: application/json');
-echo json_encode($response);
