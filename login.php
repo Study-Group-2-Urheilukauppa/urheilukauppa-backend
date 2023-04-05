@@ -15,7 +15,7 @@ require_once './inc/headers.php';
     try {
         $dbcon = openDB();
 
-        $statement = $dbcon->prepare("SELECT Username, Pw FROM Login WHERE Username = :username");
+        $statement = $dbcon->prepare("SELECT Username, Pw FROM Login WHERE BINARY Username = :username");
         $statement->bindParam(':username', $username);
         $statement->execute();
 
