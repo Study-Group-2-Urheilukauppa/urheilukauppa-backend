@@ -15,7 +15,7 @@ require_once './inc/headers.php';
     try {
         $dbcon = openDB();
 
-        $statement = $dbcon->prepare("SELECT Username, Pw FROM Login WHERE BINARY Username = :username");
+        $statement = $dbcon->prepare("SELECT Username, Pw, Role FROM Login WHERE BINARY Username = :username");
         $statement->bindParam(':username', $username);
         $statement->execute();
 
@@ -26,7 +26,8 @@ require_once './inc/headers.php';
                 // Return a JSON response indicating success
                 $response = array(
                     'success' => true,
-                    'message' => 'Login successful'
+                    'message' => 'Login successful',
+                    'role' => $row['Role']
                 );
                 echo json_encode($response);
             } else {

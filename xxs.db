@@ -81,7 +81,8 @@ FOREIGN KEY (productid)
 CREATE TABLE Login (
   id INT PRIMARY KEY AUTO_INCREMENT,
   username VARCHAR(255) UNIQUE NOT NULL,
-  pw CHAR(60) NOT NULL
+  pw CHAR(60) NOT NULL,
+  role ENUM('client', 'admin') NOT NULL DEFAULT 'client'
 );
 /* FEEDBACK */
 
