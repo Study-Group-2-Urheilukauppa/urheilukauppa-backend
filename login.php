@@ -24,19 +24,22 @@ require_once './inc/headers.php';
             $hash = $row['Pw'];
             if (password_verify($password, $hash)) {
                 // Return a JSON response indicating success
-                $response = array(
-                    'success' => true,
-                    'message' => 'Login successful',
-                    'role' => $row['Role']
-                );
-                echo json_encode($response);
-            } else {
-                // Return a JSON response indicating failure
-                $response = array(
-                    'success' => false,
-                    'message' => 'Invalid username or password'
-                );
-                echo json_encode($response);
+                $token = bin2hex(random_bytes(16));
+
+            // Store the token in the database
+            $statement = $dbcon->prepare("UPDATE Login SET Token = :token WHERE BINARY Username = :username");
+            $statement->bindParam(':token', $token);
+            $statement->bindParam(':username', $username);
+            $statement->execute();
+
+            // Return a JSON response with the token and user role
+            $response = array(
+                'success' => true,
+                'message' => 'Login successful',
+                'role' => $row['Role'],
+                'token' => $token
+            );
+            echo json_encode($response);
             }
         } else {
             // Return a JSON response indicating failure
