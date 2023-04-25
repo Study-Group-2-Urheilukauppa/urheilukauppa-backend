@@ -21,7 +21,8 @@ use xxs;
 
 CREATE TABLE Client (
 clientid INT NOT NULL AUTO_INCREMENT,
-clientname CHAR(30) NOT NULL,
+firstname CHAR(30) NOT NULL,
+lastname CHAR(30) NOT NULL,
 postalcode CHAR(10),
 clientaddress CHAR(30), 
 phonenumber CHAR(20),
@@ -81,10 +82,13 @@ FOREIGN KEY (productid)
 /*Login*/
 CREATE TABLE Login (
   id INT PRIMARY KEY AUTO_INCREMENT,
+  clientid INT NOT NULL,
   username VARCHAR(255) UNIQUE NOT NULL,
   pw CHAR(60) NOT NULL,
   role ENUM('client', 'admin') NOT NULL DEFAULT 'client',
-  token VARCHAR (255)
+  token VARCHAR (255),
+    FOREIGN KEY (clientid)
+    REFERENCES client (clientid)
 );
 /* FEEDBACK */
 
@@ -451,10 +455,9 @@ säällä. Kypärässä on myös helppokäyttöinen säätöjärjestelmä, jonka
 
 
 /* ASIAKAS*/
-insert into Client (clientname,postalcode,clientaddress,phonenumber) values ("Matti","90500","ouluntie1","123456789");
+
 
 /* TILAUKSET*/
-insert into Orders (clientid,orderdate,orderstate)VALUES("1","2023-03-24 11:40:01","");
+
 
 /* TILAUSRIVI*/
-insert into Orderrow (ordernum,rownum,productid,pcs) VALUES ("1","1","1001","3");
