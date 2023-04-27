@@ -88,7 +88,7 @@ CREATE TABLE Login (
   role ENUM('client', 'admin') NOT NULL DEFAULT 'client',
   token VARCHAR (255),
     FOREIGN KEY (clientid)
-    REFERENCES client (clientid)
+    REFERENCES Client (clientid)
 );
 /* FEEDBACK */
 
