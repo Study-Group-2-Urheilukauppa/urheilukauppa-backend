@@ -10,11 +10,22 @@ require_once "inc/headers.php";
 
 try {
     $db = openDb();
+
+    $statement = $db->prepare("SELECT id FROM Login WHERE token = :token");
+    $statement->bindParam(':token', $token);
+    $statement->execute();
+    $id = $statement->fetch(PDO::FETCH_ASSOC);
+
     $statement = $db->prepare("SELECT role FROM Login WHERE token = :token");
     $statement->bindParam(':token', $token);
     $statement->execute();
+    $role = $statement->fetch(PDO::FETCH_ASSOC);
 
-    $response = $statement->fetch(PDO::FETCH_ASSOC);
+    $response = array(
+        "userid" => $id['id'],
+        "role" => $role['role']
+    );
+
     echo json_encode($response);
     
 } catch (PDOException $pdoex) {
