@@ -60,11 +60,10 @@ ALTER TABLE Product AUTO_INCREMENT=1001;
 
 CREATE TABLE Orders (
 ordernum INT NOT NULL AUTO_INCREMENT,
-rownum INTEGER NOT NULL,
 clientid INT NOT NULL,
 orderdate DATETIME NOT NULL default CURRENT_TIMESTAMP,
-orderstate CHAR(1),
-PRIMARY KEY (ordernum, rownum),
+orderstate ENUM('käsittelyssä', 'käsitelty') NOT NULL DEFAULT 'käsittelyssä',
+PRIMARY KEY (ordernum),
 FOREIGN KEY (clientid)
     REFERENCES Client (clientid)
 ); 
@@ -73,9 +72,10 @@ FOREIGN KEY (clientid)
 
 CREATE TABLE Orderrow (
 ordernum INTEGER NOT NULL,
+rownum INTEGER NOT NULL,
 productid INTEGER NOT NULL,
 pcs INTEGER NOT NULL,
-PRIMARY KEY (ordernum),
+PRIMARY KEY (ordernum,rownum),
 FOREIGN KEY (productid)
     REFERENCES Product (productid)
 );
