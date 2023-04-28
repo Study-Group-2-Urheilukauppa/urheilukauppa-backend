@@ -1,4 +1,6 @@
 <?php
+require_once '../inc/functions.php';
+require_once '../inc/headers.php';
 
 $data = json_decode(file_get_contents("php://input"));
 $userId = $data->userid;
@@ -14,15 +16,16 @@ try {
     $clientid = $dbcon->lastInsertId();
   
     // Insert product data
-    $sql = "INSERT INTO Orderrow (orderid, productid, amount) VALUES (?, ?, ?)";
+    $sql = "INSERT INTO Orderrow (ordernum, productid, pcs) VALUES (?, ?, ?)";
     $statement = $dbcon->prepare($sql);
-    
-    foreach ($cart as $item) {
-        $productid = $item->productid;
+
+    foreach ($cart as $productid => $item) {
         $amount = $item->amount;
         
         $statement->execute([$clientid, $productid, $amount]);
     }
+
+    
 
     $response = array(
         "orderid" => $clientid,
